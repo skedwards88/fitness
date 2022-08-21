@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(242, 230, 123);
+}
+
+.progressBar {
+  height: 3vh;
+  width: 100%;
+  background-color: gray;
+}
+
+.progress {
+  height: 3vh;
+  background-color: green;
+}
