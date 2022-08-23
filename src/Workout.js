@@ -8,7 +8,7 @@ export default function Workout({
 }) {
   return (
     <div>
-      <div>exercise info</div>
+      <div>{workoutState.currentExercise.name}</div>
       <div>up next</div>
       <div>timer</div>
       <div>total</div>

@@ -16,27 +16,31 @@ function getExercise() {
 }
 
 function workoutReducer(currentState, payload) {
-  console.log("reducer:")
-  console.log(JSON.stringify(payload));
 
   if (payload.action === "reset") {
     return workoutInit(payload);
   }
   else if (payload.action === "decrement") {
     const newRemainingSec = currentState.remainingSec - 1;
+
+    const oldInterval = Math.floor(
+      (currentState.totalSec - currentState.remainingSec) /
+      currentState.intervalSec
+    )
+    const newInterval = Math.floor(
+      (currentState.totalSec - currentState.remainingSec - 1) /
+      currentState.intervalSec
+    )
+    let currentExercise = currentState.currentExercise;
+    if (currentState.totalSec - currentState.remainingSec > 0 && oldInterval !== newInterval){
+      currentExercise = getExercise()
+    }
+
     return {
       ...currentState,
       remainingSec: newRemainingSec,
       isRunning: newRemainingSec > 0 ? currentState.isRunning : false,
-    };
-  }
-  else if (payload.action === "increment") {
-    const newRemainingSec =
-      currentState.remainingSec + currentState.bonusTime;
-    return {
-      ...currentState,
-      remainingSec: newRemainingSec,
-      isRunning: newRemainingSec > 0 ? currentState.isRunning : false,
+      currentExercise: currentExercise,
     };
   }
   else if (payload.action === "play") {
@@ -53,13 +57,22 @@ function workoutReducer(currentState, payload) {
 
 function workoutInit({ totalSec, intervalSec }) {
   return {
-    remainingSec: totalSec,
-    isRunning: false,
     totalSec: totalSec,
     intervalSec: intervalSec,
+    intermissionSec: 5,
+    remainingSec: totalSec,
+    isRunning: false,
     areas: ["upper"],
     types: ["stretch", "strength"],
     gear: ["none"],
+    currentExercise: {
+      name: "jumping jacks",
+      description: "",
+      variations: [],
+      type: "strength",
+      primaryMuscle: "abs",
+      equipment: "none",
+    },
   };
 }
 
@@ -68,10 +81,9 @@ function App() {
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(
     workoutReducer,
-    {},
+    {totalSec: 300, intervalSec: 30}, // todo pull from old state in init and don't pass here?
     workoutInit
   );
-
   if (showSettings) {
     return (
       <Settings
@@ -80,7 +92,7 @@ function App() {
         workoutState={workoutState}
       ></Settings>
     );
-  } else if (workoutState.remainingSec > 0) {
+  } else if (true || workoutState.remainingSec > 0) {
     //todo if ex in progress
     return (
       <Workout

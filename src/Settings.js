@@ -32,11 +32,12 @@ export default function Settings({
             <option value={10 * 60}>10</option>
           </select>
 
-          <label htmlFor="intervalSec">Total</label>
+          <label htmlFor="intervalSec">Interval</label>
           <select
             id="intervalSec"
             defaultValue={workoutState.intervalSec || 15}
           >
+            <option value={5}>5</option>
             <option value={15}>15</option>
             <option value={30}>30</option>
             <option value={45}>45</option>
