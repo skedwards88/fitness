@@ -1,14 +1,12 @@
 import React from "react";
 
 export default function Timer({ dispatchWorkoutState, workoutState }) {
-  console.log("workout state is:")
-  console.log(JSON.stringify(workoutState))
 
   React.useEffect(() => {
     let timerID;
-    if (workoutState.isRunning && workoutState.remainingSec > 0) {
+    if (workoutState.isRunning && workoutState.elapsedSec < workoutState.totalSec) {
       timerID = setInterval(
-        () => dispatchWorkoutState({ action: "decrement" }),
+        () => dispatchWorkoutState({ action: "increment" }),
         1000
       );
     }
@@ -19,7 +17,7 @@ export default function Timer({ dispatchWorkoutState, workoutState }) {
     <div>
       <div>
         {workoutState.intervalSec -
-          ((workoutState.totalSec - workoutState.remainingSec) %
+          ((workoutState.elapsedSec) %
             workoutState.intervalSec)}
       </div>
       <div className="progressBar">
@@ -27,7 +25,7 @@ export default function Timer({ dispatchWorkoutState, workoutState }) {
           className="progress"
           style={{
             width: `${
-              (((workoutState.totalSec - workoutState.remainingSec) %
+              (((workoutState.elapsedSec) %
                 workoutState.intervalSec) /
                 workoutState.intervalSec) *
               100
@@ -36,7 +34,7 @@ export default function Timer({ dispatchWorkoutState, workoutState }) {
         ></div>
       </div>
       <div>{`${Math.floor(
-        (workoutState.totalSec - workoutState.remainingSec) /
+        (workoutState.elapsedSec) /
           workoutState.intervalSec
       )} / ${workoutState.totalSec / workoutState.intervalSec}`}</div>
       <div className="progressBar">
@@ -46,7 +44,7 @@ export default function Timer({ dispatchWorkoutState, workoutState }) {
             width: `${
               (100 *
                 Math.floor(
-                  (workoutState.totalSec - workoutState.remainingSec) /
+                  (workoutState.elapsedSec) /
                     workoutState.intervalSec
                 )) /
               (workoutState.totalSec / workoutState.intervalSec)

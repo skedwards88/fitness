@@ -20,26 +20,28 @@ function workoutReducer(currentState, payload) {
   if (payload.action === "reset") {
     return workoutInit(payload);
   }
-  else if (payload.action === "decrement") {
-    const newRemainingSec = currentState.remainingSec - 1;
+  else if (payload.action === "increment") {
+    const newElapsedSec = currentState.elapsedSec + 1;
 
     const oldInterval = Math.floor(
-      (currentState.totalSec - currentState.remainingSec) /
+      (currentState.elapsedSec) /
       currentState.intervalSec
     )
     const newInterval = Math.floor(
-      (currentState.totalSec - currentState.remainingSec - 1) /
+      (newElapsedSec) /
       currentState.intervalSec
     )
+    console.log(`old int ${oldInterval}, newInt ${newInterval}`);
     let currentExercise = currentState.currentExercise;
-    if (currentState.totalSec - currentState.remainingSec > 0 && oldInterval !== newInterval){
+    if (oldInterval !== newInterval){
       currentExercise = getExercise()
     }
+    console.log(`is running: ${newElapsedSec < currentState.totalSec}`)
 
     return {
       ...currentState,
-      remainingSec: newRemainingSec,
-      isRunning: newRemainingSec > 0 ? currentState.isRunning : false,
+      elapsedSec: newElapsedSec,
+      isRunning: newElapsedSec < currentState.totalSec ? currentState.isRunning : false,
       currentExercise: currentExercise,
     };
   }
@@ -60,7 +62,7 @@ function workoutInit({ totalSec, intervalSec }) {
     totalSec: totalSec,
     intervalSec: intervalSec,
     intermissionSec: 5,
-    remainingSec: totalSec,
+    elapsedSec: 0,
     isRunning: false,
     areas: ["upper"],
     types: ["stretch", "strength"],
@@ -92,7 +94,7 @@ function App() {
         workoutState={workoutState}
       ></Settings>
     );
-  } else if (true || workoutState.remainingSec > 0) {
+  } else if (true || newElapsedSec < currentState.totalSec) {
     //todo if ex in progress
     return (
       <Workout
