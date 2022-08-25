@@ -3,6 +3,7 @@ import "./App.css";
 import Workout from "./Workout";
 import Home from "./Home";
 import Settings from "./Settings";
+import getExercisesForCategory from "./exercises";
 
 function getExercise() {
   return {
@@ -73,6 +74,7 @@ function workoutInit({ totalSec = 300, intervalSec = 45 }) {
 }
 
 function App() {
+  getExercisesForCategory({type:[],area:["lower"],gear:[]})
   const [showSettings, setShowSettings] = React.useState(false);
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(
