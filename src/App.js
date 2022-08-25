@@ -16,42 +16,32 @@ function getExercise() {
 }
 
 function workoutReducer(currentState, payload) {
-
   if (payload.action === "reset") {
     return workoutInit(payload);
-  }
-  else if (payload.action === "increment") {
+  } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
 
     const oldInterval = Math.floor(
-      (currentState.elapsedSec) /
-      currentState.intervalSec
-    )
-    const newInterval = Math.floor(
-      (newElapsedSec) /
-      currentState.intervalSec
-    )
-    console.log(`old int ${oldInterval}, newInt ${newInterval}`);
+      currentState.elapsedSec / currentState.intervalSec
+    );
+    const newInterval = Math.floor(newElapsedSec / currentState.intervalSec);
     let currentExercise = currentState.currentExercise;
-    if (oldInterval !== newInterval){
-      currentExercise = getExercise()
+    if (oldInterval !== newInterval) {
+      currentExercise = getExercise();
     }
-    console.log(`is running: ${newElapsedSec < currentState.totalSec}`)
 
     return {
       ...currentState,
       elapsedSec: newElapsedSec,
-      isRunning: newElapsedSec < currentState.totalSec ? currentState.isRunning : false,
+      isRunning:
+        newElapsedSec < currentState.totalSec ? currentState.isRunning : false,
       currentExercise: currentExercise,
     };
-  }
-  else if (payload.action === "play") {
+  } else if (payload.action === "play") {
     return { ...currentState, isRunning: true };
-  }
-  else if (payload.action === "pause") {
+  } else if (payload.action === "pause") {
     return { ...currentState, isRunning: false };
-  }
-  else {
+  } else {
     console.log(`unknown ${console.log(JSON.stringify(payload))}`);
     return { ...currentState };
   }
@@ -83,7 +73,7 @@ function App() {
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(
     workoutReducer,
-    {totalSec: 300, intervalSec: 30}, // todo pull from old state in init and don't pass here?
+    { totalSec: 300, intervalSec: 15 }, // todo pull from old state in init and don't pass here?
     workoutInit
   );
   if (showSettings) {

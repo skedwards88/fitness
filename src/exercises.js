@@ -18,19 +18,19 @@ const muscles = {
   obliques: "obliques",
   forearm: "forearm",
   heart: "heart",
-}
+};
 
 const equipment = {
   none: "none",
   bands: "resistance bands",
-  massageBall: "massage ball"
-}
+  massageBall: "massage ball",
+};
 
 const types = {
   cardio: "cardio",
   strength: "strength",
   stretch: "stretch",
-}
+};
 
 const exercises = [
   {
@@ -39,7 +39,7 @@ const exercises = [
     variations: ["normal", "tricep", "diamond"],
     type: types.strength,
     primaryMuscle: muscles.pectoralis,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "chest press",
@@ -47,7 +47,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.pectoralis,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "fly",
@@ -55,7 +55,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.pectoralis,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "rows",
@@ -63,7 +63,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.trapezius,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "overhead press",
@@ -71,7 +71,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.deltoids,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "down dog pushups",
@@ -79,7 +79,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.deltoids,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "shoulder raises",
@@ -87,7 +87,7 @@ const exercises = [
     variations: ["to side", "to front"],
     type: types.strength,
     primaryMuscle: muscles.deltoids,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "reverse fly",
@@ -95,7 +95,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.trapezius,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "overhead pull downs (pull ups)",
@@ -103,7 +103,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.latissimus,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "bicep curls",
@@ -111,7 +111,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.biceps,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "tricep curls",
@@ -119,7 +119,7 @@ const exercises = [
     variations: ["overhead", "kick backs"],
     type: types.strength,
     primaryMuscle: "",
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "dips",
@@ -127,7 +127,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.triceps,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "wrist curls",
@@ -135,7 +135,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.forearm,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "reverse wrist curls",
@@ -143,7 +143,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.forearm,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "squats",
@@ -151,7 +151,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.quads,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "calf raises",
@@ -159,7 +159,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.calves,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "hamstring kickbacks",
@@ -167,7 +167,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "dead lifts",
@@ -175,7 +175,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "bridge lifts",
@@ -183,7 +183,7 @@ const exercises = [
     variations: ["single leg", "feet elevated", "normal", "wide legs"],
     type: types.strength,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "pectoral stretch (happy saguaro)",
@@ -191,7 +191,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.pectoralis,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "trapezius stretch (todo)",
@@ -199,7 +199,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.trapezius,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "deltoids stretch (todo)",
@@ -207,7 +207,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.deltoids,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "lats stretch (todo)",
@@ -215,7 +215,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.latissimus,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "biceps stretch (todo)",
@@ -223,7 +223,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.biceps,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "tricep stretch (todo)",
@@ -231,7 +231,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.triceps,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "quad stretch",
@@ -239,7 +239,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.quads,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "calf stretch",
@@ -247,7 +247,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.calves,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "hamstring stretch",
@@ -255,7 +255,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "hip flexor stretch",
@@ -263,7 +263,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.hipFlexors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "glute stretch",
@@ -271,7 +271,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.gluteus,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "obliques stretch",
@@ -279,7 +279,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.obliques,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "abs stretch",
@@ -287,7 +287,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.abs,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "abductors stretch",
@@ -295,7 +295,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "adductors stretch",
@@ -303,7 +303,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.adductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "shin stretch",
@@ -311,7 +311,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.shin,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "arch stretch",
@@ -319,7 +319,7 @@ const exercises = [
     variations: [],
     type: types.stretch,
     primaryMuscle: muscles.arch,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
 
   {
@@ -328,7 +328,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.pectoralis,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "trapezius massage",
@@ -336,7 +336,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.trapezius,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "deltoids massage",
@@ -344,7 +344,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.deltoids,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "lats massage",
@@ -352,7 +352,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.latissimus,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "biceps massage",
@@ -360,7 +360,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.biceps,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "tricep massage",
@@ -368,7 +368,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.triceps,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "quad massage",
@@ -376,7 +376,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.quads,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "calf massage",
@@ -384,7 +384,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.calves,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "hamstring massage",
@@ -392,7 +392,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "hip flexor massage",
@@ -400,7 +400,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.hipFlexors,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "glute massage",
@@ -408,7 +408,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.gluteus,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "obliques massage",
@@ -416,7 +416,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.obliques,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "abs massage",
@@ -424,7 +424,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.abs,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "abductors massage",
@@ -432,7 +432,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "adductors massage",
@@ -440,7 +440,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.adductors,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "shin massage",
@@ -448,7 +448,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.shin,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "arch massage",
@@ -456,7 +456,7 @@ const exercises = [
     variations: [],
     type: types.massage,
     primaryMuscle: muscles.arch,
-    equipment: equipment.massageBall
+    equipment: equipment.massageBall,
   },
   {
     name: "donkey kicks",
@@ -464,7 +464,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "fire hydrants",
@@ -472,7 +472,7 @@ const exercises = [
     variations: ["normal", "straighten leg at end of kick"],
     type: types.strength,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "clams",
@@ -480,7 +480,7 @@ const exercises = [
     variations: ["normal", "knee and toe taps", "circles"],
     type: types.strength,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "outer hip with band",
@@ -488,7 +488,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "inner hip with band",
@@ -496,7 +496,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.adductors,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "front hip with band",
@@ -504,7 +504,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.hipFlexors,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "back hip with band",
@@ -512,7 +512,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.bands
+    equipment: equipment.bands,
   },
   {
     name: "leg lift to side",
@@ -520,7 +520,7 @@ const exercises = [
     variations: ["warrior 3", "standing", "laying"],
     type: types.strength,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "leg lift to inside",
@@ -528,7 +528,7 @@ const exercises = [
     variations: ["warrior 3", "standing", "laying"],
     type: types.strength,
     primaryMuscle: muscles.adductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "leg lift to front",
@@ -536,7 +536,7 @@ const exercises = [
     variations: ["warrior 3", "standing", "laying"],
     type: types.strength,
     primaryMuscle: muscles.hipFlexors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "leg lift to back",
@@ -544,7 +544,7 @@ const exercises = [
     variations: ["warrior 3", "standing", "laying"],
     type: types.strength,
     primaryMuscle: muscles.hamstrings,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "spider walk",
@@ -552,7 +552,7 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.abductors,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "jumping jacks",
@@ -560,23 +560,37 @@ const exercises = [
     variations: [],
     type: types.cardio,
     primaryMuscle: muscles.heart,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "crunches",
     description: "",
-    variations: ["regular", "fingers to sky", "fingers to feet along ground", "knees up", "legs up", "legs up touch toes"],
+    variations: [
+      "regular",
+      "fingers to sky",
+      "fingers to feet along ground",
+      "knees up",
+      "legs up",
+      "legs up touch toes",
+    ],
     type: types.strength,
     primaryMuscle: muscles.abs,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "oblique crunches",
     description: "",
-    variations: ["hips to one side", "elbow to knee", "fingers to feet along ground", "knees up", "legs up", "legs up touch toes"],
+    variations: [
+      "hips to one side",
+      "elbow to knee",
+      "fingers to feet along ground",
+      "knees up",
+      "legs up",
+      "legs up touch toes",
+    ],
     type: types.strength,
     primaryMuscle: muscles.abs,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "reverse crunches",
@@ -584,24 +598,44 @@ const exercises = [
     variations: [],
     type: types.strength,
     primaryMuscle: muscles.abs,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "leg lifts",
     description: "",
-    variations: ["normal","wide legs","criss-cross up and down","alphabet","circles","flutter kicks","partner throwdown (todo make equipment partner?)","crucifixions","side to side"],
+    variations: [
+      "normal",
+      "wide legs",
+      "criss-cross up and down",
+      "alphabet",
+      "circles",
+      "flutter kicks",
+      "partner throwdown (todo make equipment partner?)",
+      "crucifixions",
+      "side to side",
+    ],
     type: types.strength,
     primaryMuscle: muscles.abs,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
   {
     name: "plank",
     description: "",
-    variations: ["forearm","hands","step side-side", "tap hips side-side","knee to elbow","knee to opposite elbow","hand taps shoulder","partner hand taps","one arm side-side","side plank","side plank with hips up and down"],
+    variations: [
+      "forearm",
+      "hands",
+      "step side-side",
+      "tap hips side-side",
+      "knee to elbow",
+      "knee to opposite elbow",
+      "hand taps shoulder",
+      "partner hand taps",
+      "one arm side-side",
+      "side plank",
+      "side plank with hips up and down",
+    ],
     type: types.strength,
     primaryMuscle: muscles.abs,
-    equipment: equipment.none
+    equipment: equipment.none,
   },
-
-]
-
+];

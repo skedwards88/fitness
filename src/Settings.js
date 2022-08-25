@@ -33,10 +33,7 @@ export default function Settings({
           </select>
 
           <label htmlFor="intervalSec">Interval</label>
-          <select
-            id="intervalSec"
-            defaultValue={workoutState.intervalSec || 15}
-          >
+          <select id="intervalSec" defaultValue={workoutState.intervalSec || 5}>
             <option value={5}>5</option>
             <option value={15}>15</option>
             <option value={30}>30</option>

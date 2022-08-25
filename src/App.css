@@ -1,5 +1,6 @@
 body {
   background-color: rgb(242, 230, 123);
+  font-family: sans-serif;
 }
 
 .progressBar {
@@ -10,5 +11,5 @@ body {
 
 .progress {
   height: 3vh;
-  background-color: green;
+  /* background-color: green; */
 }
