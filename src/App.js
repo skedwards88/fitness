@@ -22,12 +22,16 @@ function workoutReducer(currentState, payload) {
     const newElapsedSec = currentState.elapsedSec + 1;
 
     const oldInterval = Math.floor(
-      currentState.elapsedSec / currentState.intervalSec
+      currentState.elapsedSec /
+        (currentState.intervalSec + currentState.intermissionSec)
     );
-    const newInterval = Math.floor(newElapsedSec / currentState.intervalSec);
+
+    const newInterval = Math.floor(
+      newElapsedSec / (currentState.intervalSec + currentState.intermissionSec)
+    );
     let currentExercise = currentState.currentExercise;
     if (oldInterval !== newInterval) {
-      currentExercise = getExercise();
+      currentExercise = getExercise(currentState);
     }
 
     return {
@@ -47,7 +51,7 @@ function workoutReducer(currentState, payload) {
   }
 }
 
-function workoutInit({ totalSec, intervalSec }) {
+function workoutInit({ totalSec = 300, intervalSec = 45 }) {
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
@@ -73,7 +77,7 @@ function App() {
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(
     workoutReducer,
-    { totalSec: 300, intervalSec: 15 }, // todo pull from old state in init and don't pass here?
+    {},
     workoutInit
   );
   if (showSettings) {

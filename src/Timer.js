@@ -1,5 +1,19 @@
 import React from "react";
 
+function ProgressBar({ progressWidth, progressColor }) {
+  return (
+    <div className="progressBar">
+      <div
+        className="progress"
+        style={{
+          width: `${progressWidth}%`,
+          backgroundColor: progressColor,
+        }}
+      ></div>
+    </div>
+  );
+}
+
 export default function Timer({ dispatchWorkoutState, workoutState }) {
   React.useEffect(() => {
     let timerID;
@@ -24,7 +38,9 @@ export default function Timer({ dispatchWorkoutState, workoutState }) {
     workoutState.elapsedSec /
       (workoutState.intervalSec + workoutState.intermissionSec)
   );
-  const totalIntervals = workoutState.totalSec / workoutState.intervalSec;
+  const totalIntervals = Math.floor(
+    workoutState.totalSec / workoutState.intervalSec
+  );
 
   // if in intermission, count down
   // otherwise, count up
@@ -47,25 +63,16 @@ export default function Timer({ dispatchWorkoutState, workoutState }) {
   return (
     <div>
       <div>{progressSec}</div>
-      <div className="progressBar">
-        <div
-          className="progress"
-          style={{
-            width: `${progressWidth}%`,
-            backgroundColor: progressColor,
-          }}
-        ></div>
-      </div>
+      <ProgressBar
+        progressColor={progressColor}
+        progressWidth={progressWidth}
+      ></ProgressBar>
+
       <div>{`${currentInterval} / ${totalIntervals}`}</div>
-      <div className="progressBar">
-        <div
-          className="progress"
-          style={{
-            width: `${100 * (currentInterval / totalIntervals)}%`,
-            backgroundColor: "green",
-          }}
-        ></div>
-      </div>
+      <ProgressBar
+        progressColor="green"
+        progressWidth={100 * (currentInterval / totalIntervals)}
+      ></ProgressBar>
     </div>
   );
 }

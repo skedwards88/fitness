@@ -4,12 +4,12 @@ body {
 }
 
 .progressBar {
-  height: 3vh;
+  height: 5vh;
   width: 100%;
   background-color: gray;
 }
 
 .progress {
-  height: 3vh;
+  height: 5vh;
   /* background-color: green; */
 }
