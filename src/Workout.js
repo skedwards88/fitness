@@ -8,7 +8,7 @@ export default function Workout({
 }) {
   return (
     <div>
-      <div>{workoutState.currentExercise.name}</div>
+      <div>{workoutState.currentExercise}</div>
       <Timer
         dispatchWorkoutState={dispatchWorkoutState}
         workoutState={workoutState}

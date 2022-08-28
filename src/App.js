@@ -52,29 +52,34 @@ function workoutReducer(currentState, payload) {
   }
 }
 
-function workoutInit({ totalSec = 300, intervalSec = 45 }) {
+function workoutInit({ totalSec = 300, intervalSec = 45, gear, type, area }) {
+  const matchingExercises = getExercisesForCategory({
+    type: type,
+    area: area,
+    gear: gear,
+  });
+  //todo message/default? if no matching exericses
+  //todo settings should default to settings not to false
+  const firstExercise =
+    matchingExercises[Math.floor(Math.random() * matchingExercises.length)];
+
+  console.log(JSON.stringify(matchingExercises));
+  console.log(firstExercise);
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
     intermissionSec: 5,
     elapsedSec: 0,
     isRunning: false,
-    areas: ["upper"],
-    types: ["stretch", "strength"],
-    gear: ["none"],
-    currentExercise: {
-      name: "jumping jacks",
-      description: "",
-      variations: [],
-      type: "strength",
-      primaryMuscle: "abs",
-      equipment: "none",
-    },
+    area: area,
+    type: type,
+    gear: gear,
+    matchingExercises: matchingExercises,
+    currentExercise: firstExercise,
   };
 }
 
 function App() {
-  getExercisesForCategory({type:[],area:["lower"],gear:[]})
   const [showSettings, setShowSettings] = React.useState(false);
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(
@@ -90,7 +95,10 @@ function App() {
         workoutState={workoutState}
       ></Settings>
     );
-  } else if (true || newElapsedSec < currentState.totalSec) {
+  } else if (
+    workoutState.elapsedSec &&
+    workoutState.elapsedSec < workoutState.totalSec
+  ) {
     //todo if ex in progress
     return (
       <Workout
