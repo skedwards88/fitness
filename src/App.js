@@ -4,21 +4,12 @@ import Workout from "./Workout";
 import Home from "./Home";
 import Settings from "./Settings";
 import getExercisesForCategory from "./exercises";
-
-function getExercise() {
-  return {
-    name: "reverse crunches",
-    description: "",
-    variations: [],
-    type: "strength",
-    primaryMuscle: "abs",
-    equipment: "none",
-  };
-}
+import { Area, Gear, Type } from "./categories";
+import { Statuses } from "./statuses";
 
 function workoutReducer(currentState, payload) {
-  if (payload.action === "reset") {
-    return workoutInit(payload);
+  if (payload.action === "newWorkout") {
+    return workoutInit({ ...payload, startWorkout: true });
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
 
@@ -32,45 +23,74 @@ function workoutReducer(currentState, payload) {
     );
     let currentExercise = currentState.currentExercise;
     if (oldInterval !== newInterval) {
-      currentExercise = getExercise(currentState);
+      currentExercise =
+        currentState.matchingExercises[
+          Math.floor(Math.random() * currentState.matchingExercises.length)
+        ];
     }
 
     return {
       ...currentState,
       elapsedSec: newElapsedSec,
-      isRunning:
-        newElapsedSec < currentState.totalSec ? currentState.isRunning : false,
+      status:
+        newElapsedSec < currentState.totalSec
+          ? currentState.status
+          : Statuses.complete,
       currentExercise: currentExercise,
     };
   } else if (payload.action === "play") {
-    return { ...currentState, isRunning: true };
+    return { ...currentState, status: Statuses.running };
   } else if (payload.action === "pause") {
-    return { ...currentState, isRunning: false };
+    return { ...currentState, status: Statuses.paused };
   } else {
     console.log(`unknown ${console.log(JSON.stringify(payload))}`);
     return { ...currentState };
   }
 }
 
-function workoutInit({ totalSec = 300, intervalSec = 45, gear, type, area }) {
+function workoutInit({
+  totalSec,
+  intervalSec,
+  gear,
+  type,
+  area,
+  startWorkout,
+}) {
+  const savedState = undefined; //todo
+
+  totalSec = totalSec || savedState?.totalSec || 300;
+  intervalSec = intervalSec || savedState?.intervalSec || 45;
+  gear = gear ||
+    savedState?.gear || [
+      Gear.bodyWeight,
+      Gear.massageBall,
+      Gear.resistanceBands,
+    ];
+  type = type ||
+    savedState?.type || [
+      Type.cardio,
+      Type.massage,
+      Type.stretch,
+      Type.strength,
+    ];
+  area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
+
   const matchingExercises = getExercisesForCategory({
     type: type,
     area: area,
     gear: gear,
   });
   //todo message/default? if no matching exericses
-  //todo settings should default to settings not to false
   const firstExercise =
     matchingExercises[Math.floor(Math.random() * matchingExercises.length)];
 
   console.log(JSON.stringify(matchingExercises));
-  console.log(firstExercise);
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
     intermissionSec: 5,
     elapsedSec: 0,
-    isRunning: false,
+    status: startWorkout ? Statuses.paused : Statuses.notStarted,
     area: area,
     type: type,
     gear: gear,
@@ -96,7 +116,8 @@ function App() {
       ></Settings>
     );
   } else if (
-    workoutState.elapsedSec &&
+    (workoutState.status === Statuses.running ||
+      workoutState.status === Statuses.paused) &&
     workoutState.elapsedSec < workoutState.totalSec
   ) {
     //todo if ex in progress

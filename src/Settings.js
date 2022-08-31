@@ -48,7 +48,7 @@ export default function Settings({
       newArea.push(Area.core);
     }
     dispatchWorkoutState({
-      action: "reset",
+      action: "newWorkout",
       totalSec: newTotalSec,
       intervalSec: newIntervalSec,
       gear: newGear,
@@ -84,47 +84,75 @@ export default function Settings({
             <input
               id={Gear.bodyWeight}
               type="checkbox"
-              defaultChecked={false}
+              defaultChecked={workoutState.gear.includes(Gear.bodyWeight)}
             />
 
             <label htmlFor={Gear.massageBall}>Massage ball</label>
             <input
               id={Gear.massageBall}
               type="checkbox"
-              defaultChecked={false}
+              defaultChecked={workoutState.gear.includes(Gear.massageBall)}
             />
 
             <label htmlFor={Gear.resistanceBands}>Resistance bands</label>
             <input
               id={Gear.resistanceBands}
               type="checkbox"
-              defaultChecked={false}
+              defaultChecked={workoutState.gear.includes(Gear.resistanceBands)}
             />
           </div>
 
           <div className="setting-group">
             <label htmlFor={Type.cardio}>Cardio</label>
-            <input id={Type.cardio} type="checkbox" defaultChecked={false} />
+            <input
+              id={Type.cardio}
+              type="checkbox"
+              defaultChecked={workoutState.type.includes(Type.cardio)}
+            />
 
             <label htmlFor={Type.strength}>Strength</label>
-            <input id={Type.strength} type="checkbox" defaultChecked={false} />
+            <input
+              id={Type.strength}
+              type="checkbox"
+              defaultChecked={workoutState.type.includes(Type.strength)}
+            />
 
             <label htmlFor={Type.stretch}>Stretch</label>
-            <input id={Type.stretch} type="checkbox" defaultChecked={false} />
+            <input
+              id={Type.stretch}
+              type="checkbox"
+              defaultChecked={workoutState.type.includes(Type.stretch)}
+            />
 
             <label htmlFor={Type.massage}>Massage</label>
-            <input id={Type.massage} type="checkbox" defaultChecked={false} />
+            <input
+              id={Type.massage}
+              type="checkbox"
+              defaultChecked={workoutState.type.includes(Type.massage)}
+            />
           </div>
 
           <div className="setting-group">
             <label htmlFor={Area.upper}>Upper</label>
-            <input id={Area.upper} type="checkbox" defaultChecked={false} />
+            <input
+              id={Area.upper}
+              type="checkbox"
+              defaultChecked={workoutState.area.includes(Area.upper)}
+            />
 
             <label htmlFor={Area.lower}>Lower</label>
-            <input id={Area.lower} type="checkbox" defaultChecked={false} />
+            <input
+              id={Area.lower}
+              type="checkbox"
+              defaultChecked={workoutState.area.includes(Area.lower)}
+            />
 
             <label htmlFor={Area.core}>Core</label>
-            <input id={Area.core} type="checkbox" defaultChecked={false} />
+            <input
+              id={Area.core}
+              type="checkbox"
+              defaultChecked={workoutState.area.includes(Area.core)}
+            />
           </div>
         </div>
         <button type="submit">Start</button>
