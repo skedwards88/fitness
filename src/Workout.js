@@ -66,24 +66,30 @@ export default function Workout({
   }
 
   return (
-    <div>
+    <div id="workout">
       <div>
         {baseSec < workoutState.intermissionSec
           ? `Up next: ${workoutState.currentExercise}`
           : workoutState.currentExercise}
       </div>
-      <div>{progressSec}</div>
-      <ProgressBar
-        progressColor={progressColor}
-        progressWidth={progressWidth}
-      ></ProgressBar>
 
-      <div>{`${currentInterval} / ${totalIntervals}`}</div>
-      <ProgressBar
-        progressColor="green"
-        progressWidth={100 * (currentInterval / totalIntervals)}
-      ></ProgressBar>
-      <div>
+      <div className="progress-group">
+        <div className="progress-label">{progressSec}</div>
+        <ProgressBar
+          progressColor={progressColor}
+          progressWidth={progressWidth}
+        ></ProgressBar>
+      </div>
+
+      <div className="progress-group">
+        <div className="progress-label">{`${currentInterval} / ${totalIntervals}`}</div>
+        <ProgressBar
+          progressColor="green"
+          progressWidth={100 * (currentInterval / totalIntervals)}
+        ></ProgressBar>
+      </div>
+
+      <div className="button-group">
         {workoutState.status === Statuses.running ? (
           <button
             id="pauseButton"
@@ -99,7 +105,7 @@ export default function Workout({
             Play
           </button>
         )}
-        <button>Change</button>
+        <button>Swap</button>
         <button onClick={() => setShowSettings(true)}>New</button>
         <button>Cancel</button>
       </div>
