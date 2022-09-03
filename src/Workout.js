@@ -20,9 +20,6 @@ export default function Workout({
   dispatchWorkoutState,
   workoutState,
 }) {
-  console.log(JSON.stringify(workoutState.exercisePool));
-  console.log(JSON.stringify(workoutState.secondaryExercisePool));
-
   React.useEffect(() => {
     let timerID;
     if (

@@ -5,6 +5,9 @@ export default function Home({ setShowSettings }) {
     "Use it or lose it",
     "Healthy body, healthy life",
     "Just do it",
+    "Life is more fun when you're living it",
+    "Prioritize your self",
+    "Be proactive about staying active",
   ];
 
   return (

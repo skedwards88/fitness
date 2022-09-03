@@ -328,10 +328,6 @@ export default function getExercisesForCategory({
   area = [],
   gear = [],
 }) {
-  console.log("in get exercises");
-  console.log(JSON.stringify(type));
-  console.log(JSON.stringify(area));
-  console.log(JSON.stringify(gear));
   type = type.length
     ? type
     : [Type.cardio, Type.massage, Type.stretch, Type.strength];
@@ -422,8 +418,6 @@ export default function getExercisesForCategory({
       }
     }
   }
-
-  console.log(JSON.stringify(exercises));
 
   return exercises;
 }

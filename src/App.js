@@ -49,6 +49,19 @@ function getNewExercise({ exercisePool, secondaryExercisePool }) {
   };
 }
 
+function speak(text) {
+  const allVoices = window.speechSynthesis.getVoices();
+  const englishVoices = allVoices.filter((voice) =>
+    voice.lang.startsWith("en")
+  );
+  const voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
+  let speech = new SpeechSynthesisUtterance(text);
+  speech.voice = voice;
+  // speech.rate = 1; // 0.1 to 10
+  // speech.pitch = 2; //0 to 2
+  speechSynthesis.speak(speech);
+}
+
 function workoutReducer(currentState, payload) {
   if (payload.action === "newWorkout") {
     return workoutInit({ ...payload, startWorkout: true });
@@ -74,26 +87,21 @@ function workoutReducer(currentState, payload) {
             ),
           });
 
-    // let speech = new SpeechSynthesisUtterance(`Next up: ${newExercisePool}`);
-    // speech.rate = 1; // 0.1 to 10
-    // speech.pitch = 2; //0 to 2
-    // speechSynthesis.speak(speech)
-    // speech.rate = 1; // 0.1 to 10
-    // speech.pitch = 2; //0 to 2
-    // speechSynthesis.speak(speech)
-    // speech.rate = 1; // 0.1 to 10
-    // speech.pitch = 2; //0 to 2
-    // speechSynthesis.speak(speech)
-    // speech.rate = 1; // 0.1 to 10
-    // speech.pitch = 2; //0 to 2
-    // speechSynthesis.speak(speech);
+    if (amendedExercises?.currentExercise) {
+      speak(`Next up: ${amendedExercises.currentExercise}`);
+    }
+
+    const totalIntervals = Math.floor(
+      currentState.totalSec / currentState.intervalSec
+    );
+    const totalIntermission = currentState.intermissionSec * totalIntervals;
 
     return {
       ...currentState,
       ...amendedExercises,
       elapsedSec: newElapsedSec,
       status:
-        newElapsedSec < currentState.totalSec
+        newElapsedSec < currentState.totalSec + totalIntermission
           ? currentState.status
           : Statuses.complete,
     };
@@ -156,7 +164,6 @@ function workoutInit({
   //todo message/default? if no matching exericses
   const firstExercise = exercisePool.pop();
 
-  console.log(JSON.stringify(exercisePool));
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
@@ -189,9 +196,9 @@ function App() {
       ></Settings>
     );
   } else if (
-    ((workoutState.status === Statuses.running ||
+    (workoutState.status === Statuses.running ||
       workoutState.status === Statuses.paused) &&
-      workoutState.elapsedSec < workoutState.totalSec)
+    workoutState.elapsedSec < workoutState.totalSec
   ) {
     //todo if ex in progress
     return (
