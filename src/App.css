@@ -14,10 +14,10 @@ button {
   font-size: var(--font-size);
   background-color: rgb(215, 204, 204);
   border: 2px solid black;
-  border-radius: 2px;
+  border-radius: 10%;
   color: black;
   margin: 0;
-  padding: 1px 6px;
+  padding: 8px 10px;
 }
 
 .button-group {
@@ -31,7 +31,7 @@ select {
   font-size: var(--font-size);
   background-color: rgb(215, 204, 204);
   border: 2px solid black;
-  border-radius: 2px;
+  border-radius: 10%;
   text-align: center;
   color: black;
   margin: 0;
@@ -46,7 +46,7 @@ input[type="checkbox" i] {
   appearance: none;
   width: 5vmin;
   height: 5vmin;
-  border-radius: 2px;
+  border-radius: 10%;
   background-color: transparent;
   border: 2px solid black;
   margin: 0;
@@ -93,11 +93,12 @@ input[type="checkbox" i]:checked {
 
 #workout {
   height: 90vh;
-  width: 100%;
+  margin: 5vh 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  text-transform: capitalize;
 }
 
 .progressBar {
@@ -122,4 +123,10 @@ input[type="checkbox" i]:checked {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+#exercise_info {
+  font-size: calc(var(--font-size) * 1.7);
+  text-align: center;
+  white-space: pre-wrap;
 }

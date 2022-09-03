@@ -70,10 +70,9 @@ export default function Workout({
 
   return (
     <div id="workout">
-      <div>
-        {baseSec < workoutState.intermissionSec
-          ? `Up next: ${workoutState.currentExercise}`
-          : workoutState.currentExercise}
+      <div id="exercise_info">
+        <div>{baseSec < workoutState.intermissionSec ? `Up next:` : " "}</div>
+        <div>{workoutState.currentExercise}</div>
       </div>
 
       <div className="progress-group">
@@ -115,7 +114,12 @@ export default function Workout({
           Swap
         </button>
         <button onClick={() => setShowSettings(true)}>New</button>
-        <button>Cancel</button>
+        <button
+          id="swapButton"
+          onClick={() => dispatchWorkoutState({ action: "cancel" })}
+        >
+          Cancel
+        </button>{" "}
       </div>
     </div>
   );

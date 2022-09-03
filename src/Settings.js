@@ -64,7 +64,7 @@ export default function Settings({
       <form onSubmit={(event) => handleNewWorkout(event)}>
         <div>
           <div className="setting">
-            <label htmlFor="totalSec">Total</label>
+            <label htmlFor="totalSec">Total (min)</label>
             <select id="totalSec" defaultValue={workoutState.totalSec}>
               <option value={3 * 60}>3</option>
               <option value={5 * 60}>5</option>
@@ -73,7 +73,7 @@ export default function Settings({
           </div>
 
           <div className="setting">
-            <label htmlFor="intervalSec">Interval</label>
+            <label htmlFor="intervalSec">Interval (sec)</label>
             <select id="intervalSec" defaultValue={workoutState.intervalSec}>
               <option value={3}>3</option>
               <option value={15}>15</option>

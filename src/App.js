@@ -7,12 +7,7 @@ import getExercisesForCategory from "./exercises";
 import { Area, Gear, Type } from "./categories";
 import { Statuses } from "./statuses";
 
-
-
-const endWorkoutPhrases = [
-  "You rock!",
-
-]
+const endWorkoutPhrases = ["You rock!"];
 
 function shuffleArray(array) {
   let shuffledArray = array.slice();
@@ -115,6 +110,8 @@ function workoutReducer(currentState, payload) {
     return { ...currentState, status: Statuses.running };
   } else if (payload.action === "pause") {
     return { ...currentState, status: Statuses.paused };
+  } else if (payload.action === "cancel") {
+    return { ...currentState, status: Statuses.notStarted };
   } else {
     console.log(`unknown ${console.log(JSON.stringify(payload))}`);
     return { ...currentState };
@@ -192,9 +189,10 @@ function App() {
       ></Settings>
     );
   } else if (
-    (workoutState.status === Statuses.running ||
+    true ||
+    ((workoutState.status === Statuses.running ||
       workoutState.status === Statuses.paused) &&
-    workoutState.elapsedSec < workoutState.totalSec
+      workoutState.elapsedSec < workoutState.totalSec)
   ) {
     //todo if ex in progress
     return (
