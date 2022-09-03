@@ -7,6 +7,13 @@ import getExercisesForCategory from "./exercises";
 import { Area, Gear, Type } from "./categories";
 import { Statuses } from "./statuses";
 
+
+
+const endWorkoutPhrases = [
+  "You rock!",
+
+]
+
 function shuffleArray(array) {
   let shuffledArray = array.slice();
 

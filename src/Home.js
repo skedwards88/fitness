@@ -1,13 +1,17 @@
 import React from "react";
 
 export default function Home({ setShowSettings }) {
-  // todo repeat button disabled unless prev workout available
+
+  const homeScreenPhrases = [
+    "Use it or lose it",
+    "Healthy body, healthy life",
+    "Just do it"
+  ]
+
   return (
-    <div>
-      <div>icon or quote? and/or prev workout info complete</div>
-      <div>prev workout info</div>
-      <button>Repeat</button>
-      <button onClick={() => setShowSettings(true)}>New</button>
+    <div id="home">
+      <div>{homeScreenPhrases[Math.floor(Math.random() * homeScreenPhrases.length)]}</div>
+      <button onClick={() => setShowSettings(true)}>Let's Go!</button>
     </div>
   );
 }
