@@ -33,6 +33,20 @@ function shuffleArray(array) {
   return shuffledArray;
 }
 
+function getNewExercise({ exercisePool, secondaryExercisePool }) {
+  if (!exercisePool.length) {
+    exercisePool = secondaryExercisePool.reverse();
+    secondaryExercisePool = [];
+  }
+  const newExercise = exercisePool.pop();
+
+  return {
+    currentExercise: newExercise,
+    exercisePool: exercisePool,
+    secondaryExercisePool: [...secondaryExercisePool, newExercise],
+  };
+}
+
 function workoutReducer(currentState, payload) {
   if (payload.action === "newWorkout") {
     return workoutInit({ ...payload, startWorkout: true });
@@ -47,39 +61,30 @@ function workoutReducer(currentState, payload) {
     const newInterval = Math.floor(
       newElapsedSec / (currentState.intervalSec + currentState.intermissionSec)
     );
-    let amendedExercises = {};
-    if (oldInterval !== newInterval) {
-      let newExercisePool = JSON.parse(
-        JSON.stringify(currentState.exercisePool)
-      );
-      let newSecondaryExercisePool = JSON.parse(
-        JSON.stringify(currentState.secondaryExercisePool)
-      );
-      if (!newExercisePool.length) {
-        newExercisePool = newSecondaryExercisePool.reverse();
-        newSecondaryExercisePool = [];
-      }
-      const newExercise = newExercisePool.pop();
-      let speech = new SpeechSynthesisUtterance(`Next up: ${newExercisePool}`);
-      // speech.rate = 1; // 0.1 to 10
-      // speech.pitch = 2; //0 to 2
-      // speechSynthesis.speak(speech)
-      // speech.rate = 1; // 0.1 to 10
-      // speech.pitch = 2; //0 to 2
-      // speechSynthesis.speak(speech)
-      // speech.rate = 1; // 0.1 to 10
-      // speech.pitch = 2; //0 to 2
-      // speechSynthesis.speak(speech)
-      // speech.rate = 1; // 0.1 to 10
-      // speech.pitch = 2; //0 to 2
-      speechSynthesis.speak(speech);
 
-      amendedExercises = {
-        currentExercise: newExercise,
-        exercisePool: newExercisePool,
-        secondaryExercisePool: [...newSecondaryExercisePool, newExercise],
-      };
-    }
+    const amendedExercises =
+      oldInterval === newInterval
+        ? {}
+        : getNewExercise({
+            exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
+            secondaryExercisePool: JSON.parse(
+              JSON.stringify(currentState.secondaryExercisePool)
+            ),
+          });
+
+    // let speech = new SpeechSynthesisUtterance(`Next up: ${newExercisePool}`);
+    // speech.rate = 1; // 0.1 to 10
+    // speech.pitch = 2; //0 to 2
+    // speechSynthesis.speak(speech)
+    // speech.rate = 1; // 0.1 to 10
+    // speech.pitch = 2; //0 to 2
+    // speechSynthesis.speak(speech)
+    // speech.rate = 1; // 0.1 to 10
+    // speech.pitch = 2; //0 to 2
+    // speechSynthesis.speak(speech)
+    // speech.rate = 1; // 0.1 to 10
+    // speech.pitch = 2; //0 to 2
+    // speechSynthesis.speak(speech);
 
     return {
       ...currentState,
@@ -90,6 +95,15 @@ function workoutReducer(currentState, payload) {
           ? currentState.status
           : Statuses.complete,
     };
+  } else if (payload.action === "swap") {
+    const amendedExercises = getNewExercise({
+      exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
+      secondaryExercisePool: JSON.parse(
+        JSON.stringify(currentState.secondaryExercisePool)
+      ),
+    });
+
+    return { ...currentState, ...amendedExercises };
   } else if (payload.action === "play") {
     return { ...currentState, status: Statuses.running };
   } else if (payload.action === "pause") {
