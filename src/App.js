@@ -129,7 +129,7 @@ function workoutInit({
   const savedState = undefined; //todo
 
   totalSec = totalSec || savedState?.totalSec || 300;
-  intervalSec = intervalSec || savedState?.intervalSec || 3;
+  intervalSec = intervalSec || savedState?.intervalSec || 30;
   gear = gear ||
     savedState?.gear || [
       Gear.bodyWeight,
@@ -160,7 +160,7 @@ function workoutInit({
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
-    intermissionSec: 2,
+    intermissionSec: 5,
     elapsedSec: 0,
     status: startWorkout ? Statuses.paused : Statuses.notStarted,
     area: area,
@@ -189,7 +189,6 @@ function App() {
       ></Settings>
     );
   } else if (
-    true ||
     ((workoutState.status === Statuses.running ||
       workoutState.status === Statuses.paused) &&
       workoutState.elapsedSec < workoutState.totalSec)

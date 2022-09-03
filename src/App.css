@@ -94,11 +94,10 @@ input[type="checkbox" i]:checked {
 #workout {
   height: 90vh;
   margin: 5vh 5vw;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
   text-transform: capitalize;
+  grid-template-rows: 1fr auto auto auto;
 }
 
 .progressBar {
@@ -115,6 +114,7 @@ input[type="checkbox" i]:checked {
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin: 3vh 0 5vh 0;
 }
 
 .progress-label {
@@ -129,4 +129,8 @@ input[type="checkbox" i]:checked {
   font-size: calc(var(--font-size) * 1.7);
   text-align: center;
   white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+  justify-content: space-between;
 }
