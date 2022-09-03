@@ -1,3 +1,6 @@
+- add way to skip exercise
+- add way to cancel workout
+- add way to repeat workout
 - decide structure of exercise files for ease of addition
 - populate exercises
 - compile exercises (maybe make build step)
@@ -5,9 +8,6 @@
 - styling
 - change background color with each exercise?
 - save settings
-- add way to skip exercise
-- add way to cancel workout
-- add way to repeat workout
 - add readme
 - add manifest
 - set up github pages and workflow

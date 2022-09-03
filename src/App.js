@@ -7,6 +7,32 @@ import getExercisesForCategory from "./exercises";
 import { Area, Gear, Type } from "./categories";
 import { Statuses } from "./statuses";
 
+function shuffleArray(array) {
+  let shuffledArray = array.slice();
+
+  // Swap each value in an array, starting at the end of the array, with a position equal or earlier in the array.
+  for (let index = shuffledArray.length - 1; index > 0; index--) {
+    // Get a random index from 0 to the current index of the array
+    // So for an array of length 3, the first round will be 0, 1, or 2, second round 0 or 1, and last round 0
+    // The values at this index and the current index will be swapped
+    let swapIndex = Math.floor(Math.random() * (index + 1));
+
+    // If the current index and index to swap are the same, move on to the next loop iteration
+    if (index === swapIndex) {
+      continue;
+    }
+
+    // Get the original value at index,
+    // set the value at the index to be the value at the swap index,
+    // then set the value at the swap index to be the original value at the index
+    let swapValue = shuffledArray[index];
+    shuffledArray[index] = shuffledArray[swapIndex];
+    shuffledArray[swapIndex] = swapValue;
+  }
+
+  return shuffledArray;
+}
+
 function workoutReducer(currentState, payload) {
   if (payload.action === "newWorkout") {
     return workoutInit({ ...payload, startWorkout: true });
@@ -21,22 +47,48 @@ function workoutReducer(currentState, payload) {
     const newInterval = Math.floor(
       newElapsedSec / (currentState.intervalSec + currentState.intermissionSec)
     );
-    let currentExercise = currentState.currentExercise;
+    let amendedExercises = {};
     if (oldInterval !== newInterval) {
-      currentExercise =
-        currentState.matchingExercises[
-          Math.floor(Math.random() * currentState.matchingExercises.length)
-        ];
+      let newExercisePool = JSON.parse(
+        JSON.stringify(currentState.exercisePool)
+      );
+      let newSecondaryExercisePool = JSON.parse(
+        JSON.stringify(currentState.secondaryExercisePool)
+      );
+      if (!newExercisePool.length) {
+        newExercisePool = newSecondaryExercisePool.reverse();
+        newSecondaryExercisePool = [];
+      }
+      const newExercise = newExercisePool.pop();
+      let speech = new SpeechSynthesisUtterance(`Next up: ${newExercisePool}`);
+      // speech.rate = 1; // 0.1 to 10
+      // speech.pitch = 2; //0 to 2
+      // speechSynthesis.speak(speech)
+      // speech.rate = 1; // 0.1 to 10
+      // speech.pitch = 2; //0 to 2
+      // speechSynthesis.speak(speech)
+      // speech.rate = 1; // 0.1 to 10
+      // speech.pitch = 2; //0 to 2
+      // speechSynthesis.speak(speech)
+      // speech.rate = 1; // 0.1 to 10
+      // speech.pitch = 2; //0 to 2
+      speechSynthesis.speak(speech);
+
+      amendedExercises = {
+        currentExercise: newExercise,
+        exercisePool: newExercisePool,
+        secondaryExercisePool: [...newSecondaryExercisePool, newExercise],
+      };
     }
 
     return {
       ...currentState,
+      ...amendedExercises,
       elapsedSec: newElapsedSec,
       status:
         newElapsedSec < currentState.totalSec
           ? currentState.status
           : Statuses.complete,
-      currentExercise: currentExercise,
     };
   } else if (payload.action === "play") {
     return { ...currentState, status: Statuses.running };
@@ -59,7 +111,7 @@ function workoutInit({
   const savedState = undefined; //todo
 
   totalSec = totalSec || savedState?.totalSec || 300;
-  intervalSec = intervalSec || savedState?.intervalSec || 45;
+  intervalSec = intervalSec || savedState?.intervalSec || 3;
   gear = gear ||
     savedState?.gear || [
       Gear.bodyWeight,
@@ -75,26 +127,29 @@ function workoutInit({
     ];
   area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
 
-  const matchingExercises = getExercisesForCategory({
-    type: type,
-    area: area,
-    gear: gear,
-  });
-  //todo message/default? if no matching exericses
-  const firstExercise =
-    matchingExercises[Math.floor(Math.random() * matchingExercises.length)];
+  const exercisePool = shuffleArray(
+    getExercisesForCategory({
+      type: type,
+      area: area,
+      gear: gear,
+    })
+  );
 
-  console.log(JSON.stringify(matchingExercises));
+  //todo message/default? if no matching exericses
+  const firstExercise = exercisePool.pop();
+
+  console.log(JSON.stringify(exercisePool));
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
-    intermissionSec: 5,
+    intermissionSec: 2,
     elapsedSec: 0,
     status: startWorkout ? Statuses.paused : Statuses.notStarted,
     area: area,
     type: type,
     gear: gear,
-    matchingExercises: matchingExercises,
+    exercisePool: exercisePool,
+    secondaryExercisePool: [firstExercise],
     currentExercise: firstExercise,
   };
 }
