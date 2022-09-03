@@ -7,8 +7,6 @@ import getExercisesForCategory from "./exercises";
 import { Area, Gear, Type } from "./categories";
 import { Statuses } from "./statuses";
 
-const endWorkoutPhrases = ["You rock!"];
-
 function shuffleArray(array) {
   let shuffledArray = array.slice();
 
@@ -57,8 +55,6 @@ function speak(text) {
   const voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
   let speech = new SpeechSynthesisUtterance(text);
   speech.voice = voice;
-  // speech.rate = 1; // 0.1 to 10
-  // speech.pitch = 2; //0 to 2
   speechSynthesis.speak(speech);
 }
 
@@ -67,7 +63,7 @@ function workoutReducer(currentState, payload) {
     return workoutInit({ ...payload, startWorkout: true });
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
-
+    console.log(`increment to ${newElapsedSec}`);
     const oldInterval = Math.floor(
       currentState.elapsedSec /
         (currentState.intervalSec + currentState.intermissionSec)
@@ -96,6 +92,21 @@ function workoutReducer(currentState, payload) {
     );
     const totalIntermission = currentState.intermissionSec * totalIntervals;
 
+    if (newElapsedSec >= currentState.totalSec + totalIntermission) {
+      const endWorkoutPhrases = [
+        "You rock!",
+        "Good jorb!",
+        "Yeah baby!",
+        "Ohh yeah!",
+        "Woohoo!",
+        "Yippee!",
+        "Nice!",
+        "Who's awesome? You're awesome."
+      ];
+      speak(
+        endWorkoutPhrases[Math.floor(Math.random() * endWorkoutPhrases.length)]
+      );
+    }
     return {
       ...currentState,
       ...amendedExercises,
@@ -167,7 +178,7 @@ function workoutInit({
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
-    intermissionSec: 5,
+    intermissionSec: 2,
     elapsedSec: 0,
     status: startWorkout ? Statuses.paused : Statuses.notStarted,
     area: area,
@@ -196,9 +207,8 @@ function App() {
       ></Settings>
     );
   } else if (
-    (workoutState.status === Statuses.running ||
-      workoutState.status === Statuses.paused) &&
-    workoutState.elapsedSec < workoutState.totalSec
+    workoutState.status === Statuses.running ||
+    workoutState.status === Statuses.paused
   ) {
     //todo if ex in progress
     return (
