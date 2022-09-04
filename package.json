@@ -1,5 +1,5 @@
 {
-  "name": "exercise",
+  "name": "fitness",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skedwards88/exercise.git"
+    "url": "git+https://github.com/skedwards88/fitness.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skedwards88/exercise/issues"
+    "url": "https://github.com/skedwards88/fitness/issues"
   },
-  "homepage": "https://github.com/skedwards88/exercise#readme",
+  "homepage": "https://github.com/skedwards88/fitness#readme",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
