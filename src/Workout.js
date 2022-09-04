@@ -65,8 +65,34 @@ export default function Workout({
     progressSec = baseSec - workoutState.intermissionSec + 1;
   }
 
+  function Warning({ exercisePool, secondaryExercisePool, totalIntervals }) {
+    const numExercises =
+      exercisePool.filter((i) => i).length +
+      secondaryExercisePool.filter((i) => i).length;
+    if (numExercises === 0) {
+      return (
+        <div className="warning">
+          No exercises found! Try expanding your settings, or make up your own
+          workout.
+        </div>
+      );
+    } else if (numExercises < totalIntervals && numExercises < 25) {
+      return (
+        <div className="warning">{`Only ${numExercises} exercises found. Try expanding your settings, or expect repeats.`}</div>
+      );
+    } else {
+      return <></>;
+    }
+  }
+
   return (
     <div id="workout">
+      <Warning
+        exercisePool={workoutState.exercisePool}
+        secondaryExercisePool={workoutState.secondaryExercisePool}
+        totalIntervals={totalIntervals}
+      ></Warning>
+
       <div id="exercise_info">
         <div>{baseSec < workoutState.intermissionSec ? `Up next:` : " "}</div>
         <div>{workoutState.currentExercise}</div>

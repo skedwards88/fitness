@@ -134,3 +134,9 @@ input[type="checkbox" i]:checked {
   min-height: 20vh;
   justify-content: space-between;
 }
+
+.warning {
+  text-transform: none;
+  color: rgb(236, 58, 58);
+  text-align: center;
+}

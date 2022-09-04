@@ -1,5 +1,3 @@
-- save settings
-- voice prompt
 - halfway prompt if bilateral
 - decide structure of exercise files for ease of addition
 - populate exercises

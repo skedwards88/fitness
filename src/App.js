@@ -48,6 +48,7 @@ function getNewExercise({ exercisePool, secondaryExercisePool }) {
 }
 
 function speak(text) {
+  console.log(`speaking ${text}`);
   const allVoices = window.speechSynthesis.getVoices();
   const englishVoices = allVoices.filter((voice) =>
     voice.lang.startsWith("en")
@@ -83,25 +84,25 @@ function workoutReducer(currentState, payload) {
             ),
           });
 
-    if (amendedExercises?.currentExercise) {
-      speak(`Next up: ${amendedExercises.currentExercise}`);
-    }
-
     const totalIntervals = Math.floor(
       currentState.totalSec / currentState.intervalSec
     );
-    const totalIntermission = currentState.intermissionSec * totalIntervals;
+    const workoutIsOver = newInterval >= totalIntervals;
 
-    if (newElapsedSec >= currentState.totalSec + totalIntermission) {
+    if (!workoutIsOver && amendedExercises?.currentExercise) {
+      speak(`Next up: ${amendedExercises.currentExercise}`);
+    }
+
+    if (workoutIsOver) {
       const endWorkoutPhrases = [
-        "You rock!",
-        "Good jorb!",
-        "Yeah baby!",
-        "Ohh yeah!",
-        "Woohoo!",
-        "Yippee!",
-        "Nice!",
-        "Who's awesome? You're awesome."
+        "You rock!!!",
+        "Good jorb!!!",
+        "Yeah baby!!!",
+        "Ohhhh yeah!!!",
+        "Woohoo!!!",
+        "Yippee!!!",
+        "Nice!!!",
+        "Who's awesome? You're awesome!!!",
       ];
       speak(
         endWorkoutPhrases[Math.floor(Math.random() * endWorkoutPhrases.length)]
@@ -111,10 +112,7 @@ function workoutReducer(currentState, payload) {
       ...currentState,
       ...amendedExercises,
       elapsedSec: newElapsedSec,
-      status:
-        newElapsedSec < currentState.totalSec + totalIntermission
-          ? currentState.status
-          : Statuses.complete,
+      status: workoutIsOver ? Statuses.complete : currentState.status,
     };
   } else if (payload.action === "swap") {
     const amendedExercises = getNewExercise({
@@ -144,8 +142,11 @@ function workoutInit({
   type,
   area,
   startWorkout,
+  useSaved = true,
 }) {
-  const savedState = undefined; //todo
+  const savedState = useSaved
+    ? JSON.parse(localStorage.getItem("workoutState"))
+    : undefined;
 
   totalSec = totalSec || savedState?.totalSec || 300;
   intervalSec = intervalSec || savedState?.intervalSec || 30;
@@ -171,8 +172,8 @@ function workoutInit({
       gear: gear,
     })
   );
+  console.log(JSON.stringify(exercisePool));
 
-  //todo message/default? if no matching exericses
   const firstExercise = exercisePool.pop();
 
   return {
@@ -198,6 +199,11 @@ function App() {
     {},
     workoutInit
   );
+
+  React.useEffect(() => {
+    window.localStorage.setItem("workoutState", JSON.stringify(workoutState));
+  }, [workoutState]);
+
   if (showSettings) {
     return (
       <Settings
@@ -210,7 +216,6 @@ function App() {
     workoutState.status === Statuses.running ||
     workoutState.status === Statuses.paused
   ) {
-    //todo if ex in progress
     return (
       <Workout
         setShowSettings={setShowSettings}
