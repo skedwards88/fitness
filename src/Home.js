@@ -6,7 +6,7 @@ export default function Home({ setShowSettings }) {
     "Healthy body, healthy life",
     "Just do it",
     "Life is more fun when you're living it",
-    "Prioritize your self",
+    "Prioritize yourself",
     "Be proactive about staying active",
   ];
 
@@ -19,6 +19,7 @@ export default function Home({ setShowSettings }) {
           ]
         }
       </div>
+      <div id="mascot"></div>
       <button onClick={() => setShowSettings(true)}>Let's Go!</button>
     </div>
   );

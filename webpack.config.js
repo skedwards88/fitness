@@ -1,7 +1,7 @@
 const path = require("path");
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env, argv) => {
 
@@ -16,19 +16,17 @@ module.exports = (env, argv) => {
     template: "./src/index.html"
   })
 
-  // const copyPlugin = new CopyPlugin({
-  //   patterns: [
-  //     { from: "./src/images/favicon.svg", to: "./assets/favicon.svg" },
-  //     { from: "./src/images/favicon.ico", to: "./assets/favicon.ico" },
-  //     { from: "./src/images/icon_192.png", to: "./assets/icon_192.png" },
-  //     { from: "./src/images/icon_512.png", to: "./assets/icon_512.png" },
-  //     { from: "./src/images/maskable_icon.png", to: "./assets/maskable_icon.png" },
-  //     { from: "./src/manifest.json", to: "./assets/manifest.json" },
-  //   ],
-  //   options: {
-  //     concurrency: 100,
-  //   },
-  // })
+  const copyPlugin = new CopyPlugin({
+    patterns: [
+      { from: "./src/images/icon.svg", to: "./assets/favicon.svg" },
+      { from: "./src/images/icon.ico", to: "./assets/favicon.ico" },
+      { from: "./src/images/icon.png", to: "./assets/icon_720.png" },
+      { from: "./src/manifest.json", to: "./assets/manifest.json" },
+    ],
+    options: {
+      concurrency: 100,
+    },
+  })
 
   const serviceWorkerPlugin = new WorkboxPlugin.GenerateSW({
     // these options encourage the ServiceWorkers to get in there fast
@@ -37,7 +35,7 @@ module.exports = (env, argv) => {
     skipWaiting: true,
   })
 
-  const plugins = argv.mode === 'development' ? [htmlPlugin] : [htmlPlugin, serviceWorkerPlugin]
+  const plugins = argv.mode === 'development' ? [htmlPlugin] : [htmlPlugin, copyPlugin, serviceWorkerPlugin]
 
   return {
   entry: "./src/index.js",

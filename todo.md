@@ -4,6 +4,4 @@
 - compile exercises (maybe make build step)
 - change background color with each exercise?
 - add readme
-- add manifest
 - set up github pages and workflow
-- make favicon

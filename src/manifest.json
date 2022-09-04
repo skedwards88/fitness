@@ -1,0 +1,23 @@
+{
+  "name": "Fitness Bot",
+  "short_name": "Fitness Bot",
+  "description": "A fitness app",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "start_url": "../.",
+  "background_color": "#595959",
+  "theme_color": "#ffeb12",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "720x720"
+    },
+    {
+      "src": "icon_720.png",
+      "type": "image/png",
+      "sizes": "720x720"
+    }
+  ]
+}
