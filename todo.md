@@ -1,7 +1,4 @@
 - halfway prompt if bilateral
-- decide structure of exercise files for ease of addition
-- populate exercises
-- compile exercises (maybe make build step)
-- change background color with each exercise?
+- change structure of exercise data
 - add readme
-- set up github pages and workflow
+- why not installing as app?
