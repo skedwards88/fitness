@@ -50,13 +50,15 @@ function getNewExercise({ exercisePool, secondaryExercisePool }) {
 function speak(text) {
   console.log(`speaking ${text}`);
   const allVoices = window.speechSynthesis.getVoices();
+  console.log(`I have ${allVoices}`)
   const englishVoices = allVoices.filter((voice) =>
     voice.lang.startsWith("en")
   );
   const voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
+  console.log(JSON.stringify(`speaking iwth ${voice}`))
   let speech = new SpeechSynthesisUtterance(text);
   speech.voice = voice;
-  speechSynthesis.speak(speech);
+  window.speechSynthesis.speak(speech);
 }
 
 function workoutReducer(currentState, payload) {
@@ -64,7 +66,6 @@ function workoutReducer(currentState, payload) {
     return workoutInit({ ...payload, startWorkout: true });
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
-    console.log(`increment to ${newElapsedSec}`);
     const oldInterval = Math.floor(
       currentState.elapsedSec /
         (currentState.intervalSec + currentState.intermissionSec)
@@ -172,14 +173,13 @@ function workoutInit({
       gear: gear,
     })
   );
-  console.log(JSON.stringify(exercisePool));
 
   const firstExercise = exercisePool.pop();
 
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
-    intermissionSec: 5,
+    intermissionSec: 2,
     elapsedSec: 0,
     status: startWorkout ? Statuses.paused : Statuses.notStarted,
     area: area,
@@ -192,6 +192,27 @@ function workoutInit({
 }
 
 function App() {
+
+  const [voices, setVoices] = React.useState([]);
+  console.log(`1: voices ${voices}`)
+
+  const populateVoiceList = React.useCallback(() => {
+    console.log('in populateVoiceList')
+    const newVoices = window.speechSynthesis.getVoices();
+    console.log(`got ${newVoices}`)
+    setVoices(newVoices);
+  }, []);
+
+  console.log(`2: voices ${voices}`)
+
+  React.useEffect(() => {
+    console.log(`in useEffect`)
+    populateVoiceList();
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = populateVoiceList;
+    }
+  }, [populateVoiceList]);
+
   const [showSettings, setShowSettings] = React.useState(false);
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(

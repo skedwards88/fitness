@@ -20,7 +20,7 @@ export default function Home({ setShowSettings }) {
         }
       </div>
       <div id="mascot"></div>
-      <div>1.2</div>
+      <div>1.3</div>
       <button onClick={() => setShowSettings(true)}>Let's Go!</button>
     </div>
   );

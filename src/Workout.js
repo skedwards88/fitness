@@ -84,8 +84,9 @@ export default function Workout({
       return <></>;
     }
   }
-
+  console.log('rerender')
   return (
+    
     <div id="workout">
       <Warning
         exercisePool={workoutState.exercisePool}
@@ -138,11 +139,25 @@ export default function Workout({
         </button>
         <button onClick={() => setShowSettings(true)}>New</button>
         <button
-          id="swapButton"
+          id="cancelButton"
           onClick={() => dispatchWorkoutState({ action: "cancel" })}
         >
           Cancel
-        </button>{" "}
+        </button>
+        <button
+          id="talkButton"
+          onClick={() => {
+            let speech = new SpeechSynthesisUtterance("hello there");
+            window.speechSynthesis.speak(speech);
+            let allVoices = window.speechSynthesis.getVoices();
+            console.log(allVoices)
+            console.log(Array.from(allVoices).length)
+            let speech2 = new SpeechSynthesisUtterance(`I have ${Array.from(allVoices).length} voices`);
+            window.speechSynthesis.speak(speech2);
+          }}
+        >
+          Talk
+        </button>
       </div>
     </div>
   );
