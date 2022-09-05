@@ -149,11 +149,17 @@ export default function Workout({
           onClick={() => {
             let speech = new SpeechSynthesisUtterance("hello there");
             window.speechSynthesis.speak(speech);
+
             let allVoices = window.speechSynthesis.getVoices();
             console.log(allVoices)
             console.log(Array.from(allVoices).length)
             let speech2 = new SpeechSynthesisUtterance(`I have ${Array.from(allVoices).length} voices`);
             window.speechSynthesis.speak(speech2);
+
+            const englishVoices = allVoices.filter((voice) =>voice.lang.startsWith("en"));
+            let speech3 = new SpeechSynthesisUtterance(`I have ${Array.from(englishVoices).length} english voices`);
+            window.speechSynthesis.speak(speech3);
+
           }}
         >
           Talk
