@@ -179,7 +179,7 @@ function workoutInit({
   return {
     totalSec: totalSec,
     intervalSec: intervalSec,
-    intermissionSec: 2,
+    intermissionSec: 5,
     elapsedSec: 0,
     status: startWorkout ? Statuses.paused : Statuses.notStarted,
     area: area,
