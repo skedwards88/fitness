@@ -159,7 +159,11 @@ export default function Workout({
             const englishVoices = allVoices.filter((voice) =>voice.lang.startsWith("en"));
             let speech3 = new SpeechSynthesisUtterance(`I have ${Array.from(englishVoices).length} english voices`);
             window.speechSynthesis.speak(speech3);
-
+            for (let index = 0; index < englishVoices.length; index++) {
+              let speech4 = new SpeechSynthesisUtterance(`This is voice number ${index}`);
+              speech4.voice = englishVoices[index];
+              window.speechSynthesis.speak(speech4);
+            }
           }}
         >
           Talk
