@@ -20,7 +20,7 @@ export default function Home({ setShowSettings }) {
         }
       </div>
       <div id="mascot"></div>
-      <div>1.3</div>
+      <div>1.4</div>
       <button
       onClick={() => {
         // ios won't speak unless the user clicks something first that directly causes speech
