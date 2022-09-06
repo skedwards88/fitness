@@ -1,2 +1,2 @@
 - halfway prompt if bilateral
-- add readme
+- add sound on/off button that controls whether execute the speak function
