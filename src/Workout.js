@@ -152,8 +152,6 @@ export default function Workout({
             window.speechSynthesis.speak(speech);
 
             let allVoices = window.speechSynthesis.getVoices();
-            console.log(allVoices)
-            console.log(Array.from(allVoices).length)
             let speech2 = new SpeechSynthesisUtterance(`I have ${Array.from(allVoices).length} voices`);
             window.speechSynthesis.speak(speech2);
 
@@ -163,9 +161,12 @@ export default function Workout({
             window.speechSynthesis.speak(speech3);
 
             for (let index = 0; index < englishVoices.length; index++) {
+              console.log(englishVoices[index])
               let speech4 = new SpeechSynthesisUtterance(`This is voice number ${index}`);
               speech4.voice = englishVoices[index];
-              speech4.voice.lang = englishVoices[index].replace("_","-");
+              let lang = englishVoices[index].lang;
+              console.log(lang)
+              speech4.lang = lang.replace("_","-");
               window.speechSynthesis.speak(speech4);
             }
           }}
