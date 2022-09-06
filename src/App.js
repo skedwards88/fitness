@@ -48,14 +48,11 @@ function getNewExercise({ exercisePool, secondaryExercisePool }) {
 }
 
 function speak(text) {
-  console.log(`speaking ${text}`);
   const allVoices = window.speechSynthesis.getVoices();
-  console.log(`I have ${allVoices}`)
   const englishVoices = allVoices.filter((voice) =>
     voice.lang.startsWith("en")
   );
   const voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
-  console.log(JSON.stringify(`speaking iwth ${voice}`))
   let speech = new SpeechSynthesisUtterance(text);
   speech.voice = voice;
   window.speechSynthesis.speak(speech);
