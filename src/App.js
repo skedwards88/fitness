@@ -190,25 +190,25 @@ function workoutInit({
 
 function App() {
 
-  const [voices, setVoices] = React.useState([]);
-  console.log(`1: voices ${voices}`)
+  // const [voices, setVoices] = React.useState([]);
+  // console.log(`1: voices ${voices}`)
 
-  const populateVoiceList = React.useCallback(() => {
-    console.log('in populateVoiceList')
-    const newVoices = window.speechSynthesis.getVoices();
-    console.log(`got ${newVoices}`)
-    setVoices(newVoices);
-  }, []);
+  // const populateVoiceList = React.useCallback(() => {
+  //   console.log('in populateVoiceList')
+  //   const newVoices = window.speechSynthesis.getVoices();
+  //   console.log(`got ${newVoices}`)
+  //   setVoices(newVoices);
+  // }, []);
 
-  console.log(`2: voices ${voices}`)
+  // console.log(`2: voices ${voices}`)
 
-  React.useEffect(() => {
-    console.log(`in useEffect`)
-    populateVoiceList();
-    if (window.speechSynthesis.onvoiceschanged !== undefined) {
-      window.speechSynthesis.onvoiceschanged = populateVoiceList;
-    }
-  }, [populateVoiceList]);
+  // React.useEffect(() => {
+  //   console.log(`in useEffect`)
+  //   populateVoiceList();
+  //   if (window.speechSynthesis.onvoiceschanged !== undefined) {
+  //     window.speechSynthesis.onvoiceschanged = populateVoiceList;
+  //   }
+  // }, [populateVoiceList]);
 
   const [showSettings, setShowSettings] = React.useState(false);
 
