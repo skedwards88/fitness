@@ -144,35 +144,6 @@ export default function Workout({
         >
           Cancel
         </button>
-
-        <button
-          id="talkButton"
-          onClick={() => {
-            let speech = new SpeechSynthesisUtterance("hello there");
-            window.speechSynthesis.speak(speech);
-
-            let allVoices = window.speechSynthesis.getVoices();
-            let speech2 = new SpeechSynthesisUtterance(`I have ${Array.from(allVoices).length} voices`);
-            window.speechSynthesis.speak(speech2);
-
-            let englishVoices = allVoices.filter((voice) =>voice.lang.startsWith("en"));
-            console.log(JSON.stringify(englishVoices.map(v=>v.lang)))
-            let speech3 = new SpeechSynthesisUtterance(`I have ${Array.from(englishVoices).length} english voices`);
-            window.speechSynthesis.speak(speech3);
-
-            for (let index = 0; index < englishVoices.length; index++) {
-              console.log(englishVoices[index])
-              let speech4 = new SpeechSynthesisUtterance(`This is voice number ${index}`);
-              speech4.voice = englishVoices[index];
-              let lang = englishVoices[index].lang;
-              console.log(lang)
-              speech4.lang = lang.replace("_","-");
-              window.speechSynthesis.speak(speech4);
-            }
-          }}
-        >
-          Talk
-        </button>
       </div>
     </div>
   );
