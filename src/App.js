@@ -88,7 +88,7 @@ function workoutReducer(currentState, payload) {
     const workoutIsOver = newInterval >= totalIntervals;
 
     if (!workoutIsOver && amendedExercises?.currentExercise) {
-      speak(`Next up: ${amendedExercises.currentExercise}`);
+      speak(`Next up: ${amendedExercises.currentExercise.name}`);
     }
 
     if (workoutIsOver) {
