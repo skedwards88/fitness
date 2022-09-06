@@ -3,9 +3,9 @@ import "./App.css";
 import Workout from "./Workout";
 import Home from "./Home";
 import Settings from "./Settings";
-import getExercisesForCategory from "./exercises";
 import { Area, Gear, Type } from "./categories";
 import { Statuses } from "./statuses";
+import getExercises from "./getExercises"
 
 function shuffleArray(array) {
   let shuffledArray = array.slice();
@@ -142,10 +142,10 @@ function workoutInit({
   startWorkout,
   useSaved = true,
 }) {
-  const savedState = useSaved
-    ? JSON.parse(localStorage.getItem("workoutState"))
-    : undefined;
-
+  // const savedState = useSaved
+  //   ? JSON.parse(localStorage.getItem("workoutState"))
+  //   : undefined;
+  const savedState=undefined;
   totalSec = totalSec || savedState?.totalSec || 300;
   intervalSec = intervalSec || savedState?.intervalSec || 30;
   gear = gear ||
@@ -164,13 +164,13 @@ function workoutInit({
   area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
 
   const exercisePool = shuffleArray(
-    getExercisesForCategory({
+    getExercises({
       type: type,
       area: area,
       gear: gear,
     })
   );
-
+  console.log(JSON.stringify(exercisePool))
   const firstExercise = exercisePool.pop();
 
   return {

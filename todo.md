@@ -1,4 +1,2 @@
 - halfway prompt if bilateral
-- change structure of exercise data
 - add readme
-- why not installing as app?
