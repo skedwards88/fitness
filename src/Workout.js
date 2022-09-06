@@ -144,6 +144,7 @@ export default function Workout({
         >
           Cancel
         </button>
+
         <button
           id="talkButton"
           onClick={() => {
@@ -156,12 +157,15 @@ export default function Workout({
             let speech2 = new SpeechSynthesisUtterance(`I have ${Array.from(allVoices).length} voices`);
             window.speechSynthesis.speak(speech2);
 
-            const englishVoices = allVoices.filter((voice) =>voice.lang.startsWith("en"));
+            let englishVoices = allVoices.filter((voice) =>voice.lang.startsWith("en"));
+            console.log(JSON.stringify(englishVoices.map(v=>v.lang)))
             let speech3 = new SpeechSynthesisUtterance(`I have ${Array.from(englishVoices).length} english voices`);
             window.speechSynthesis.speak(speech3);
+
             for (let index = 0; index < englishVoices.length; index++) {
               let speech4 = new SpeechSynthesisUtterance(`This is voice number ${index}`);
               speech4.voice = englishVoices[index];
+              speech4.voice.lang = englishVoices[index].replace("_","-");
               window.speechSynthesis.speak(speech4);
             }
           }}
