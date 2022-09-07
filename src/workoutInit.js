@@ -1,0 +1,57 @@
+import getExercises from "./getExercises"
+import shuffleArray from "./shuffleArray";
+import { Area, Gear, Type } from "./categories";
+
+export default function workoutInit({
+  totalSec,
+  intervalSec,
+  gear,
+  type,
+  area,
+  startWorkout,
+  useSaved = true,
+}) {
+  const savedState = useSaved
+    ? JSON.parse(localStorage.getItem("workoutState"))
+    : undefined;
+  totalSec = totalSec || savedState?.totalSec || 300;
+  intervalSec = intervalSec || savedState?.intervalSec || 30;
+  gear = gear ||
+    savedState?.gear || [
+      Gear.bodyWeight,
+      Gear.massageBall,
+      Gear.resistanceBands,
+    ];
+  type = type ||
+    savedState?.type || [
+      Type.cardio,
+      Type.massage,
+      Type.stretch,
+      Type.strength,
+    ];
+  area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
+
+  const exercisePool = shuffleArray(
+    getExercises({
+      type: type,
+      area: area,
+      gear: gear,
+    })
+  );
+  console.log(JSON.stringify(exercisePool))
+  const firstExercise = exercisePool.pop();
+
+  return {
+    totalSec: totalSec,
+    intervalSec: intervalSec,
+    intermissionSec: 5,
+    elapsedSec: 0,
+    status: startWorkout ? Statuses.paused : Statuses.notStarted,
+    area: area,
+    type: type,
+    gear: gear,
+    exercisePool: exercisePool,
+    secondaryExercisePool: [firstExercise],
+    currentExercise: firstExercise,
+  };
+}
