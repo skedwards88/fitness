@@ -66,7 +66,6 @@ export default function Settings({
           <div className="setting">
             <label htmlFor="totalSec">Total (min)</label>
             <select id="totalSec" defaultValue={workoutState.totalSec}>
-              <option value={30}>.5</option>
               <option value={3 * 60}>3</option>
               <option value={5 * 60}>5</option>
               <option value={10 * 60}>10</option>
@@ -78,10 +77,10 @@ export default function Settings({
           <div className="setting">
             <label htmlFor="intervalSec">Interval (sec)</label>
             <select id="intervalSec" defaultValue={workoutState.intervalSec}>
-              <option value={2}>2</option>
               <option value={15}>15</option>
               <option value={30}>30</option>
               <option value={45}>45</option>
+              <option value={60}>60</option>
             </select>
           </div>
 

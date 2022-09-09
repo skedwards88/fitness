@@ -41,7 +41,6 @@ export default function workoutInit({
       gear: gear,
     })
   );
-  console.log(JSON.stringify(exercisePool))
   const firstExercise = exercisePool.pop();
 
   return {
