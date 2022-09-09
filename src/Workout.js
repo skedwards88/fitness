@@ -115,34 +115,43 @@ export default function Workout({
         ></ProgressBar>
       </div>
 
-      <div className="button-group">
+      <div id="workoutControls" className="button-group">
         {workoutState.status === Statuses.running ? (
           <button
             id="pauseButton"
             onClick={() => dispatchWorkoutState({ action: "pause" })}
           >
-            Pause
           </button>
         ) : (
           <button
             id="playButton"
             onClick={() => dispatchWorkoutState({ action: "play" })}
           >
-            Play
           </button>
+        )}
+        {workoutState.muted ? (
+          <button
+            id="unmuteButton"
+            onClick={() => dispatchWorkoutState({ action: "unmute" })}
+          >
+          </button>
+        ) : (
+          <button
+          id="muteButton"
+          onClick={() => dispatchWorkoutState({ action: "mute" })}
+        >
+        </button>
         )}
         <button
           id="swapButton"
           onClick={() => dispatchWorkoutState({ action: "swap" })}
         >
-          Swap
         </button>
-        <button onClick={() => setShowSettings(true)}>New</button>
+        <button id="settingsButton" onClick={() => setShowSettings(true)}></button>
         <button
           id="cancelButton"
           onClick={() => dispatchWorkoutState({ action: "cancel" })}
         >
-          Cancel
         </button>
       </div>
     </div>

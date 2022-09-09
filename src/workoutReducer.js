@@ -1,4 +1,6 @@
 import speak from "./speak";
+import { Statuses } from "./statuses";
+import workoutInit from "./workoutInit"
 
 function getNewExercise({ exercisePool, secondaryExercisePool }) {
   if (!exercisePool.length) {
@@ -17,6 +19,10 @@ function getNewExercise({ exercisePool, secondaryExercisePool }) {
 export default function workoutReducer(currentState, payload) {
   if (payload.action === "newWorkout") {
     return workoutInit({ ...payload, startWorkout: true });
+  } else if (payload.action === "mute") {
+    return { ...currentState, muted: true };
+  }  else if (payload.action === "unmute") {
+    return { ...currentState, muted: false };
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
     const oldInterval = Math.floor(
@@ -43,11 +49,11 @@ export default function workoutReducer(currentState, payload) {
     );
     const workoutIsOver = newInterval >= totalIntervals;
 
-    if (!workoutIsOver && amendedExercises?.currentExercise) {
+    if (!workoutIsOver && !currentState.muted && amendedExercises?.currentExercise) {
       speak(`Next up: ${amendedExercises.currentExercise.name}`);
     }
 
-    if (workoutIsOver) {
+    if (workoutIsOver && !currentState.muted) {
       const endWorkoutPhrases = [
         "You rock!!!",
         "Good jorb!!!",

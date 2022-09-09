@@ -1,6 +1,7 @@
 import getExercises from "./getExercises"
 import shuffleArray from "./shuffleArray";
 import { Area, Gear, Type } from "./categories";
+import { Statuses } from "./statuses";
 
 export default function workoutInit({
   totalSec,
@@ -9,6 +10,7 @@ export default function workoutInit({
   type,
   area,
   startWorkout,
+  muted,
   useSaved = true,
 }) {
   const savedState = useSaved
@@ -30,6 +32,7 @@ export default function workoutInit({
       Type.strength,
     ];
   area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
+  muted = muted ?? savedState.muted ?? false;
 
   const exercisePool = shuffleArray(
     getExercises({
@@ -53,5 +56,6 @@ export default function workoutInit({
     exercisePool: exercisePool,
     secondaryExercisePool: [firstExercise],
     currentExercise: firstExercise,
+    muted: muted,
   };
 }
