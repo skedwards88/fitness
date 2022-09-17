@@ -32,7 +32,7 @@ export default function workoutInit({
       Type.strength,
     ];
   area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
-  muted = muted ?? savedState.muted ?? false;
+  muted = muted ?? savedState?.muted ?? false;
 
   const exercisePool = shuffleArray(
     getExercises({

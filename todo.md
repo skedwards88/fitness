@@ -1,6 +1,5 @@
 - halfway prompt if bilateral
-- add sound on/off button that controls whether execute the speak function
-- remove 2 sec interval
 - make buttons higher on page for ios bar?
 - make mute button
 - make screen not fall asleep
+- move progres numbers to overlay prgress bar
