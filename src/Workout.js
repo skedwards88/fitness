@@ -1,14 +1,13 @@
 import React from "react";
 import { Statuses } from "./statuses";
 
-function ProgressBar({ progressWidth, progressColor }) {
+function ProgressBar({ progressWidth, progressDirection }) {
   return (
     <div className="progressBar">
       <div
-        className="progress"
+        className={`progress ${progressDirection}`}
         style={{
-          width: `${progressWidth}%`,
-          backgroundColor: progressColor,
+          width: `${progressWidth}%`
         }}
       ></div>
     </div>
@@ -50,14 +49,14 @@ export default function Workout({
   // if in intermission, count down
   // otherwise, count up
   let progressWidth;
-  let progressColor;
+  let progressDirection;
   let progressSec;
   if (baseSec < workoutState.intermissionSec) {
     progressWidth = 100 - (baseSec / (workoutState.intermissionSec - 1)) * 100;
-    progressColor = "red";
+    progressDirection = "decrement";
     progressSec = workoutState.intermissionSec - baseSec - 1;
   } else {
-    progressColor = "green";
+    progressDirection = "increment";
     progressWidth =
       ((baseSec - workoutState.intermissionSec + 1) /
         workoutState.intervalSec) *
@@ -102,7 +101,7 @@ export default function Workout({
       <div className="progress-group">
         <div className="progress-label">{progressSec}</div>
         <ProgressBar
-          progressColor={progressColor}
+          progressDirection={progressDirection}
           progressWidth={progressWidth}
         ></ProgressBar>
       </div>
@@ -110,7 +109,7 @@ export default function Workout({
       <div className="progress-group">
         <div className="progress-label">{`${currentInterval} / ${totalIntervals}`}</div>
         <ProgressBar
-          progressColor="green"
+          progressDirection="increment"
           progressWidth={100 * (currentInterval / totalIntervals)}
         ></ProgressBar>
       </div>

@@ -159,15 +159,24 @@ input[type="checkbox" i]:checked {
 }
 
 .progressBar {
-  height: 5vh;
+  height: 7vh;
   width: 100%;
-  background-color: rgb(170, 161, 161);
   border-radius: 5px;
+  grid-area: 1 / 1 / 2 / 2;
+  border: 5px solid black;
 }
 
 .progress {
-  height: 5vh;
-  border-radius: 5px;
+  height: 7vh;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.progress.increment {
+  background-color: rgb(70, 205, 70);
+}
+
+.progress.decrement {
+  background-color: rgb(228, 77, 63);
 }
 
 .progress-group {
@@ -175,14 +184,23 @@ input[type="checkbox" i]:checked {
   flex-direction: row;
   width: 100%;
   margin: 3vh 0 5vh 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .progress-label {
-  width: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
+  grid-area: 1 / 1 / 2 / 2;
+  z-index: 1;
+  font-weight: bold;
+  font-size: calc(var(--font-size) * 1.7);
 }
 
 #exercise_info {

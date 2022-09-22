@@ -1,5 +1,5 @@
 - halfway prompt if bilateral
+- tickmark at halfway
 - make buttons higher on page for ios bar?
 - make mute button
 - make screen not fall asleep
-- move progres numbers to overlay prgress bar
