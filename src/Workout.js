@@ -95,7 +95,7 @@ export default function Workout({
 
       <div id="exercise_info">
         <div>{baseSec < workoutState.intermissionSec ? `Up next:` : " "}</div>
-        <div>{workoutState.currentExercise.name}</div>
+        <div>{workoutState.currentExercise?.name}</div>
       </div>
 
       <div className="progress-group">
