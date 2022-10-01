@@ -3,3 +3,4 @@
 - make buttons higher on page for ios bar?
 - make mute button
 - make screen not fall asleep
+- if nothing matches, error (not working now). maybe also force to chose at least one.

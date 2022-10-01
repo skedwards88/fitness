@@ -112,6 +112,10 @@ input[type="checkbox" i] {
 
 input[type="checkbox" i]:checked {
   background-color: black;
+  background-image: url("./images/checkmark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #home {
