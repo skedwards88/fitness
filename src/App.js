@@ -21,6 +21,48 @@ function App() {
     window.localStorage.setItem("workoutState", JSON.stringify(workoutState));
   }, [workoutState]);
 
+  console.log(`workoutState.status ${workoutState.status}`)
+
+  const wakeLock = React.useRef(null);
+
+  const getWakeLock = React.useCallback(async () => {
+    console.log(`getting wakeLock`);
+    if (!("wakeLock" in navigator)) {
+      console.log("wakeLock not supported");
+      return;
+    }
+    try {
+      wakeLock.current = await navigator.wakeLock.request("screen");
+      console.log(`2. wakeLock is ${wakeLock}`);
+
+      wakeLock.current.addEventListener("release", () => {
+        console.log("Screen Wake Lock released:");
+      });
+    } catch (err) {
+      console.error(`${err.name}, ${err.message}`);
+    }
+  });
+
+  const releaseWakeLock = React.useCallback(async () => {
+    console.log("releasing wakeLock");
+    if (!("wakeLock" in navigator && wakeLock.current)) {
+      console.log("no wakeLock to release");
+      return;
+    }
+    await wakeLock.current.release();
+  });
+
+  React.useEffect(() => {
+    if (
+      workoutState.status === Statuses.running &&
+      workoutState.elapsedSec < workoutState.totalSec
+    ) {
+      getWakeLock();
+    } else {
+      releaseWakeLock();
+    }
+  }, [workoutState.status]);
+
   if (showSettings) {
     return (
       <Settings

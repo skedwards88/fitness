@@ -146,7 +146,10 @@ export default function Workout({
           onClick={() => dispatchWorkoutState({ action: "swap" })}
         >
         </button>
-        <button id="settingsButton" onClick={() => setShowSettings(true)}></button>
+        <button id="settingsButton" onClick={() => {
+            dispatchWorkoutState({ action: "pause" });
+            setShowSettings(true);
+          }}></button>
         <button
           id="cancelButton"
           onClick={() => dispatchWorkoutState({ action: "cancel" })}
