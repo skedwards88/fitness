@@ -1,848 +1,1023 @@
 [
   {
     "name": "Front punches",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Upper"
   },
   {
     "name": "Side punches",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Upper"
   },
   {
     "name": "Overhead punches",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Upper"
   },
   {
     "name": "rope climbers",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Upper"
   },
   {
     "name": "rope pullers",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Upper"
   },
   {
     "name": "happy saguaro, sad saguaro",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Upper"
   },
   {
     "name": "jumping jacks",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "high knees",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "spider walk",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "dead lifts",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "lunge knee drives",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "mario jumps",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "curtseys",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "marching",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "lunge walks",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "butt kicks",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
   },
   {
     "name": "mountain climbers",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
   },
   {
     "name": "bicycles",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
   },
   {
     "name": "tuck ins",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
   },
   {
     "name": "cosmic abs",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
   },
   {
     "name": "russian twists",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
   },
   {
     "name": "starfish in and out",
-    "gear": "bodyWeight",
-    "type": "cardio",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
   },
   {
     "name": "push-ups",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "diamond push-ups",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "tricep push-ups",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "down dog push-ups",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "dips",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "chest press with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "fly with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "rows with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "overhead press with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "shoulder raises with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "reverse fly with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "overhead pull downs (pull ups) with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "bicep curls with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "tricep curls with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "wrist curls with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "reverse wrist curls with bands",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "upper"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Upper"
   },
   {
     "name": "calf raises",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "bridge lifts",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "squats",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "donkey kicks",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "fire hydrants",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "fire hydrants with kick",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "clams",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "clam circles",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "clam knee and toe taps",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "laying leg lift to side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "standing leg lift to side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "standing leg lift to front",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "seated leg lift",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to front",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to inside",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "laying inner leg lift",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to back",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "laying leg lift to back",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "standing leg lift to back",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "lunges",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "outer hip with band",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "inner hip with band",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "front hip with band",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "back hip with band",
-    "gear": "resistanceBands",
-    "type": "strength",
-    "area": "lower"
+    "gear": "Resistance Bands",
+    "type": "Strength",
+    "area": "Lower"
   },
   {
     "name": "crunches",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "crunches with feet to sky",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "crunches with knees 90 degrees",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "crucifixions",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "alphabet leg raises",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "scissors",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "flutter kicks",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "pikes",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "tuck ins",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "sit ups",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "sit ups with twist",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "crunches fingers to sky",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "crunches fingers to feet along ground",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "crunches legs up touch toes",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "oblique crunches hips to one side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "oblique crunches elbow to knee",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "oblique crunches knees up",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "oblique crunches legs up",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "reverse crunches",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "wide leg raises",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "leg raises crisscross up and down",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "leg raises circles",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "forearm plank",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank on hands",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, step side-side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, tap hips side-side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, knee to elbow",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, knee to opposite elbow",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, hand taps shoulder",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, reach hand to front",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank, one arm side-side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "side plank",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "side plank with hips up and down",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "plank with hips up and down",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "superman pulses",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "superman legs only",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "superman arms only",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "superman alternate sides",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "boat",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "low boat",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "boat side to side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "banana side to side",
-    "gear": "bodyWeight",
-    "type": "strength",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
   },
   {
     "name": "rabbit pose",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Upper"
   },
   {
-    "name": "tricep stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "upper"
+    "name": "tricep Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Upper"
   },
   {
     "name": "eagle arms",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "upper"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Upper"
   },
   {
-    "name": "neck side stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "upper"
+    "name": "neck side Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Upper"
   },
   {
-    "name": "arm behind back shoulder stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "upper"
+    "name": "arm behind back shoulder Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Upper"
   },
   {
-    "name": "happy saguaro stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "upper"
+    "name": "happy saguaro Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Upper"
   },
   {
     "name": "lizard",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
     "name": "half monkey",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
     "name": "forward fold",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
-    "name": "figure four stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "name": "figure four Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
-    "name": "high lunge stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "name": "high lunge Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
     "name": "down dog",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
-    "name": "low lunge stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "name": "low lunge Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
     "name": "ankle rolls",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
-    "name": "quad stretch",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "lower"
+    "name": "quad Stretch",
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Lower"
   },
   {
     "name": "cobra",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Core"
   },
   {
     "name": "seated twist",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Core"
   },
   {
     "name": "up dog",
-    "gear": "bodyWeight",
-    "type": "stretch",
-    "area": "core"
+    "gear": "Body Weight",
+    "type": "Stretch",
+    "area": "Core"
   },
   {
     "name": "neck roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
-    "name": "lower back roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "name": "Lower back roll out",
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
     "name": "middle back roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
-    "name": "upper back roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "name": "Upper back roll out",
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
     "name": "top of shoulder roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
     "name": "front shoulder roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
     "name": "tricep roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
     "name": "forearm roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "upper"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Upper"
   },
   {
     "name": "hamstring roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "glute roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "quad roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "it band roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "foot roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "shin roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "calf roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
     "name": "inner thigh roll out",
-    "gear": "massageBall",
-    "type": "massage",
-    "area": "lower"
+    "gear": "Massage Ball",
+    "type": "Massage",
+    "area": "Lower"
   },
   {
-    "name": "psoas massage",
-    "gear": "bodyWeight",
-    "type": "massage",
-    "area": "core"
+    "name": "psoas Massage",
+    "gear": "Body Weight",
+    "type": "Massage",
+    "area": "Core"
   },
   {
-    "name": "upper core massage",
-    "gear": "bodyWeight",
-    "type": "massage",
-    "area": "core"
+    "name": "Upper Core Massage",
+    "gear": "Body Weight",
+    "type": "Massage",
+    "area": "Core"
+  },
+  {
+    "name": "TRX squat",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX hamstring curl",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX back lunge",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX side lunge",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX pike",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX tuck-ins",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX plank",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX side plank",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX alternating side plank",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+
+  {
+    "name": "TRX rows",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX wide rows",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX row to curl",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX row to overhead press",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX single-leg rows",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX inverted rows",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX bicep curls",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX tricep overhead press",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX tricep kickbacks",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX fly",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX reverse fly",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX chest press",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX overhead press",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX bicep curl to overhead press",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX pushups with hands on straps",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX pushups with feet in straps",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX pushups with rotation with feet in straps",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX pushups with knee tuck in straps",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "TRX hamstring curl",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX squat",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
   }
 ]
