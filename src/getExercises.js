@@ -1,16 +1,17 @@
 import exercises from "./exercises.json";
-import { Area, Gear, Type } from "./categories";
+import { Areas, Gears, Types } from "./categories";
 
-export default function getExercises({
-  type = [],
-  area = [],
-  gear = [],
-}) {
-  type = type || [Type.cardio, Type.massage, Type.stretch, Type.strength];
-  area = area || [Area.core, Area.lower, Area.upper];
-  gear = gear || [Gear.bodyWeight, Gear.massageBall, Gear.resistanceBands];
+export default function getExercises({ type = [], area = [], gear = [] }) {
+  type = type || Types;
+  area = area || Areas;
+  gear = gear || Gears;
 
-  const matchingExercises = exercises.filter(exercise=>(type.includes(exercise.type) && area.includes(exercise.area) && gear.includes(exercise.gear)))
+  const matchingExercises = exercises.filter(
+    (exercise) =>
+      type.includes(exercise.type) &&
+      area.includes(exercise.area) &&
+      gear.includes(exercise.gear)
+  );
 
-  return matchingExercises
+  return matchingExercises;
 }

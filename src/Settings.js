@@ -1,5 +1,14 @@
 import React from "react";
-import { Area, Gear, Type } from "./categories";
+import { Areas, Gears, Types } from "./categories";
+
+function Checkbox({ name, checked }) {
+  return (
+    <div className="setting">
+      <label htmlFor={name}>{name}</label>
+      <input id={name} type="checkbox" defaultChecked={checked} />
+    </div>
+  );
+}
 
 export default function Settings({
   setShowSettings,
@@ -13,40 +22,25 @@ export default function Settings({
     const newIntervalSec = parseInt(event.target.elements.intervalSec.value);
 
     let newGear = [];
-    if (event.target.elements[Gear.bodyWeight].checked) {
-      newGear.push(Gear.bodyWeight);
-    }
-    if (event.target.elements[Gear.massageBall].checked) {
-      newGear.push(Gear.massageBall);
-    }
-    if (event.target.elements[Gear.resistanceBands].checked) {
-      newGear.push(Gear.resistanceBands);
-    }
+    Gears.forEach((gear) => {
+      if (event.target.elements[gear].checked) {
+        newGear.push(gear);
+      }
+    });
 
     let newType = [];
-    if (event.target.elements[Type.cardio].checked) {
-      newType.push(Type.cardio);
-    }
-    if (event.target.elements[Type.strength].checked) {
-      newType.push(Type.strength);
-    }
-    if (event.target.elements[Type.stretch].checked) {
-      newType.push(Type.stretch);
-    }
-    if (event.target.elements[Type.massage].checked) {
-      newType.push(Type.massage);
-    }
+    Types.forEach((type) => {
+      if (event.target.elements[type].checked) {
+        newType.push(type);
+      }
+    });
 
     let newArea = [];
-    if (event.target.elements[Area.upper].checked) {
-      newArea.push(Area.upper);
-    }
-    if (event.target.elements[Area.lower].checked) {
-      newArea.push(Area.lower);
-    }
-    if (event.target.elements[Area.core].checked) {
-      newArea.push(Area.core);
-    }
+    Areas.forEach((area) => {
+      if (event.target.elements[area].checked) {
+        newArea.push(area);
+      }
+    });
     dispatchWorkoutState({
       action: "newWorkout",
       totalSec: newTotalSec,
@@ -85,101 +79,33 @@ export default function Settings({
           </div>
 
           <div className="setting-group">
-            <div className="setting">
-              <label htmlFor={Gear.bodyWeight}>Body weight</label>
-              <input
-                id={Gear.bodyWeight}
-                type="checkbox"
-                defaultChecked={workoutState.gear.includes(Gear.bodyWeight)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Gear.massageBall}>Massage ball</label>
-              <input
-                id={Gear.massageBall}
-                type="checkbox"
-                defaultChecked={workoutState.gear.includes(Gear.massageBall)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Gear.resistanceBands}>Resistance bands</label>
-              <input
-                id={Gear.resistanceBands}
-                type="checkbox"
-                defaultChecked={workoutState.gear.includes(
-                  Gear.resistanceBands
-                )}
-              />
-            </div>
+            {Gears.map((gear) => (
+              <Checkbox
+                key={gear}
+                name={gear}
+                checked={workoutState.gear.includes(gear)}
+              ></Checkbox>
+            ))}
           </div>
 
           <div className="setting-group">
-            <div className="setting">
-              <label htmlFor={Type.cardio}>Cardio</label>
-              <input
-                id={Type.cardio}
-                type="checkbox"
-                defaultChecked={workoutState.type.includes(Type.cardio)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Type.strength}>Strength</label>
-              <input
-                id={Type.strength}
-                type="checkbox"
-                defaultChecked={workoutState.type.includes(Type.strength)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Type.stretch}>Stretch</label>
-              <input
-                id={Type.stretch}
-                type="checkbox"
-                defaultChecked={workoutState.type.includes(Type.stretch)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Type.massage}>Massage</label>
-              <input
-                id={Type.massage}
-                type="checkbox"
-                defaultChecked={workoutState.type.includes(Type.massage)}
-              />
-            </div>
+            {Types.map((type) => (
+              <Checkbox
+                key={type}
+                name={type}
+                checked={workoutState.type.includes(type)}
+              ></Checkbox>
+            ))}
           </div>
 
           <div className="setting-group">
-            <div className="setting">
-              <label htmlFor={Area.upper}>Upper</label>
-              <input
-                id={Area.upper}
-                type="checkbox"
-                defaultChecked={workoutState.area.includes(Area.upper)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Area.lower}>Lower</label>
-              <input
-                id={Area.lower}
-                type="checkbox"
-                defaultChecked={workoutState.area.includes(Area.lower)}
-              />
-            </div>
-
-            <div className="setting">
-              <label htmlFor={Area.core}>Core</label>
-              <input
-                id={Area.core}
-                type="checkbox"
-                defaultChecked={workoutState.area.includes(Area.core)}
-              />
-            </div>
+            {Areas.map((area) => (
+              <Checkbox
+                key={area}
+                name={area}
+                checked={workoutState.area.includes(area)}
+              ></Checkbox>
+            ))}
           </div>
         </div>
         <div className="button-group">

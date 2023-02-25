@@ -1,6 +1,6 @@
-import getExercises from "./getExercises"
+import getExercises from "./getExercises";
 import shuffleArray from "./shuffleArray";
-import { Area, Gear, Type } from "./categories";
+import { Areas, Gears, Types } from "./categories";
 import { Statuses } from "./statuses";
 
 export default function workoutInit({
@@ -18,20 +18,9 @@ export default function workoutInit({
     : undefined;
   totalSec = totalSec || savedState?.totalSec || 300;
   intervalSec = intervalSec || savedState?.intervalSec || 30;
-  gear = gear ||
-    savedState?.gear || [
-      Gear.bodyWeight,
-      Gear.massageBall,
-      Gear.resistanceBands,
-    ];
-  type = type ||
-    savedState?.type || [
-      Type.cardio,
-      Type.massage,
-      Type.stretch,
-      Type.strength,
-    ];
-  area = area || savedState?.area || [Area.core, Area.lower, Area.upper];
+  gear = gear || savedState?.gear || Gears;
+  type = type || savedState?.type || Types;
+  area = area || savedState?.area || Areas;
   muted = muted ?? savedState?.muted ?? false;
 
   const exercisePool = shuffleArray(

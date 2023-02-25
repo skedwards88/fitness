@@ -1,18 +1,21 @@
-export const Gear = {
-  bodyWeight: "bodyWeight",
-  massageBall: "massageBall",
-  resistanceBands: "resistanceBands",
-};
+import exercises from "./exercises.json";
 
-export const Area = {
-  core: "core",
-  upper: "upper",
-  lower: "lower",
-};
+function buildCategories() {
+  let gears = new Set();
+  let areas = new Set();
+  let types = new Set();
 
-export const Type = {
-  massage: "massage",
-  cardio: "cardio",
-  stretch: "stretch",
-  strength: "strength",
-};
+  exercises.forEach((exercise) => {
+    gears.add(exercise.gear);
+    areas.add(exercise.area);
+    types.add(exercise.type);
+  });
+
+  return {
+    Gears: Array.from(gears),
+    Areas: Array.from(areas),
+    Types: Array.from(types),
+  };
+}
+
+export const { Gears, Areas, Types } = buildCategories();
