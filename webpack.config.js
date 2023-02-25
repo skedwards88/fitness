@@ -71,6 +71,9 @@ module.exports = (env, argv) => {
   devServer: {
     static: "./dist",
     port: 4003,
+    headers: {
+      'Cache-Control': 'no-store',
+    },
   },
   plugins: plugins,
 }
