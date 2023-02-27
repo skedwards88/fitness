@@ -210,7 +210,7 @@
     "area": "Upper"
   },
   {
-    "name": "tricep curls with bands",
+    "name": "tricep press with bands",
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
@@ -846,30 +846,6 @@
     "area": "Core"
   },
   {
-    "name": "TRX squat",
-    "gear": "TRX",
-    "type": "Strength",
-    "area": "Lower"
-  },
-  {
-    "name": "TRX hamstring curl",
-    "gear": "TRX",
-    "type": "Strength",
-    "area": "Lower"
-  },
-  {
-    "name": "TRX back lunge",
-    "gear": "TRX",
-    "type": "Strength",
-    "area": "Lower"
-  },
-  {
-    "name": "TRX side lunge",
-    "gear": "TRX",
-    "type": "Strength",
-    "area": "Lower"
-  },
-  {
     "name": "TRX pike",
     "gear": "TRX",
     "type": "Strength",
@@ -882,7 +858,25 @@
     "area": "Core"
   },
   {
-    "name": "TRX plank",
+    "name": "TRX oblique tuck-ins",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX forearm saw",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX plank, feet in strap",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX plank, hands in strap",
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
@@ -894,12 +888,47 @@
     "area": "Core"
   },
   {
+    "name": "TRX single leg plank",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX high to low plank",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
     "name": "TRX alternating side plank",
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
-
+  {
+    "name": "TRX plank, knee to elbow",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX plank, knee to opposite elbow",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX scissors, feet in straps",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "TRX standing russian twists",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Core"
+  },
   {
     "name": "TRX rows",
     "gear": "TRX",
@@ -979,6 +1008,12 @@
     "area": "Upper"
   },
   {
+    "name": "TRX shoulder raises",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
     "name": "TRX bicep curl to overhead press",
     "gear": "TRX",
     "type": "Strength",
@@ -1003,7 +1038,7 @@
     "area": "Upper"
   },
   {
-    "name": "TRX pushups with knee tuck in straps",
+    "name": "TRX pushups with tuck in",
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
@@ -1016,6 +1051,42 @@
   },
   {
     "name": "TRX squat",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX single leg squat",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX lunge",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX side lunge",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX bridge lift",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX straight leg bridge lift",
+    "gear": "TRX",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "TRX dead lift",
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"

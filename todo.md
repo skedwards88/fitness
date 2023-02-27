@@ -1,4 +1,5 @@
 - halfway prompt if bilateral
 - tickmark at halfway
 - make buttons higher on page for ios bar?
-- make screen not fall asleep
+- show gear as well?
+- add forking/forked deployment instructions
