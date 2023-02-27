@@ -1,21 +1,14 @@
 import React from "react";
+import { motivationalPhrases } from "./motivationalPhrases";
 
 export default function Home({ setShowSettings }) {
-  const homeScreenPhrases = [
-    "Use it or lose it",
-    "Healthy body, healthy life",
-    "Just do it",
-    "Life is more fun when you're living it",
-    "Prioritize yourself",
-    "Be proactive about staying active",
-  ];
 
   return (
     <div id="home">
       <div>
         {
-          homeScreenPhrases[
-            Math.floor(Math.random() * homeScreenPhrases.length)
+          motivationalPhrases[
+            Math.floor(Math.random() * motivationalPhrases.length)
           ]
         }
       </div>

@@ -12,7 +12,7 @@ Want more games? Visit [CnS Games](https://skedwards88.github.io/portfolio/).
 
 ## Development
 
-To add a new exercise, add an entry to `src/exercises.json`.
+To add a new exercise, add an entry to `src/exercises.json`. To add a motivational phrase (shown on home screen), add an entry to `motivationalPhrases.js`. To add a celebratory phrase (spoken at the end of the workout), add an entry to `celebratoryPhrases.js`.
 
 To build, run `npm run build`.
 

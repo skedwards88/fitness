@@ -1,6 +1,7 @@
 import speak from "./speak";
 import { Statuses } from "./statuses";
 import workoutInit from "./workoutInit"
+import { celebratoryPhrases } from "./celebratoryPhrases.JS";
 
 function getNewExercise({ exercisePool, secondaryExercisePool }) {
   if (!exercisePool.length) {
@@ -54,18 +55,8 @@ export default function workoutReducer(currentState, payload) {
     }
 
     if (workoutIsOver && !currentState.muted) {
-      const endWorkoutPhrases = [
-        "You rock!!!",
-        "Good jorb!!!",
-        "Yeah baby!!!",
-        "Ohhhh yeah!!!",
-        "Woohoo!!!",
-        "Yippee!!!",
-        "Nice!!!",
-        "Who's awesome? You're awesome!!!",
-      ];
       speak(
-        endWorkoutPhrases[Math.floor(Math.random() * endWorkoutPhrases.length)]
+        celebratoryPhrases[Math.floor(Math.random() * celebratoryPhrases.length)]
       );
     }
     return {
