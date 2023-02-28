@@ -1,7 +1,7 @@
 import speak from "./speak";
 import { Statuses } from "./statuses";
 import workoutInit from "./workoutInit"
-import { celebratoryPhrases } from "./celebratoryPhrases.JS";
+import { celebratoryPhrases } from "./celebratoryPhrases.js";
 
 function getNewExercise({ exercisePool, secondaryExercisePool }) {
   if (!exercisePool.length) {
