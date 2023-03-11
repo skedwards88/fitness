@@ -1,6 +1,6 @@
 # Fitness Bot
 
-A web app that leads you through a workout session of cardio, strength, and/or stretching.
+A web app that leads you through a workout session.
 
 [Workout now!](https://skedwards88.github.io/fitness/)
 
