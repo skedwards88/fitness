@@ -222,3 +222,8 @@ input[type="checkbox" i]:checked {
   color: rgb(236, 58, 58);
   text-align: center;
 }
+
+@media (orientation: landscape) and (max-width: 1000px) {
+  body {
+    background-color: #bcae11;
+  }}
