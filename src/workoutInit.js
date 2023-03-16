@@ -44,6 +44,7 @@ export default function workoutInit({
     exercisePool: exercisePool,
     secondaryExercisePool: [firstExercise],
     currentExercise: firstExercise,
+    isFirstSide: true,
     muted: muted,
   };
 }

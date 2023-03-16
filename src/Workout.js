@@ -83,7 +83,10 @@ export default function Workout({
       return <></>;
     }
   }
-  console.log('rerender')
+  let sideText = ""
+  if (workoutState.currentExercise?.bilateral) {
+    sideText = workoutState.isFirstSide ? "first side" : "second side"
+  }
   return (
     
     <div id="workout">
@@ -96,6 +99,7 @@ export default function Workout({
       <div id="exercise_info">
         <div>{baseSec < workoutState.intermissionSec ? `Up next:` : " "}</div>
         <div>{workoutState.currentExercise?.name}</div>
+        <div>{sideText}</div>
       </div>
 
       <div className="progress-group">

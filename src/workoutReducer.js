@@ -35,33 +35,67 @@ export default function workoutReducer(currentState, payload) {
       newElapsedSec / (currentState.intervalSec + currentState.intermissionSec)
     );
 
-    const amendedExercises =
-      oldInterval === newInterval
-        ? {}
-        : getNewExercise({
-            exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
-            secondaryExercisePool: JSON.parse(
-              JSON.stringify(currentState.secondaryExercisePool)
-            ),
-          });
-
     const totalIntervals = Math.floor(
       currentState.totalSec / currentState.intervalSec
     );
     const workoutIsOver = newInterval >= totalIntervals;
 
-    if (!workoutIsOver && !currentState.muted && amendedExercises?.currentExercise) {
-      speak(`Next up: ${amendedExercises.currentExercise.name}`);
-    }
-
+    // Return early if workout is over
     if (workoutIsOver && !currentState.muted) {
       speak(
         celebratoryPhrases[Math.floor(Math.random() * celebratoryPhrases.length)]
       );
+      return {
+        ...currentState,
+        elapsedSec: newElapsedSec,
+        status: workoutIsOver ? Statuses.complete : currentState.status,
+      };
     }
+
+    let newCurrentExercise
+    let newExercisePool
+    let newSecondaryExercisePool
+    let newIsFirstSide
+    if (oldInterval === newInterval) {
+      // keep the same info
+      newCurrentExercise = currentState.currentExercise
+      newExercisePool = currentState.exercisePool
+      newSecondaryExercisePool = currentState.secondaryExercisePool
+      newIsFirstSide = currentState.isFirstSide
+    } else if (currentState.currentExercise.bilateral && currentState.isFirstSide) {
+      // keep the same exercise but switch sides
+      newCurrentExercise = currentState.currentExercise
+      newExercisePool = currentState.exercisePool
+      newSecondaryExercisePool = currentState.secondaryExercisePool
+      newIsFirstSide = !currentState.isFirstSide
+      
+      console.log(`changing sides from ${currentState.isFirstSide} to ${newIsFirstSide}`)
+      if (!currentState.muted) {
+        speak(`Switch sides.`);
+      }
+    } else {
+      // get new exercise //todo make this not return bilat if last interval?
+      ({currentExercise: newCurrentExercise ,
+        exercisePool:newExercisePool,
+        secondaryExercisePool: newSecondaryExercisePool} = getNewExercise({
+        exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
+        secondaryExercisePool: JSON.parse(
+          JSON.stringify(currentState.secondaryExercisePool)
+        ),
+      }));
+      newIsFirstSide = true;
+
+      if (!currentState.muted) {
+        newCurrentExercise.bilateral ? speak(`Next up: ${newCurrentExercise.name}, first side`) : speak(`Next up: ${newCurrentExercise.name}`);
+      }
+    }
+
     return {
       ...currentState,
-      ...amendedExercises,
+      currentExercise: newCurrentExercise,
+      exercisePool: newExercisePool,
+      isFirstSide: newIsFirstSide,
+      secondaryExercisePool: newSecondaryExercisePool,
       elapsedSec: newElapsedSec,
       status: workoutIsOver ? Statuses.complete : currentState.status,
     };

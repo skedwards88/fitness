@@ -21,8 +21,6 @@ function App() {
     window.localStorage.setItem("workoutState", JSON.stringify(workoutState));
   }, [workoutState]);
 
-  console.log(`workoutState.status ${workoutState.status}`)
-
   const wakeLock = React.useRef(null);
 
   const getWakeLock = React.useCallback(async () => {

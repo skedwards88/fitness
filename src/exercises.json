@@ -1,1092 +1,1260 @@
 [
   {
     "name": "Front punches",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Upper"
   },
   {
     "name": "Side punches",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Upper"
   },
   {
     "name": "Overhead punches",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Upper"
   },
   {
     "name": "rope climbers",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Upper"
   },
   {
     "name": "rope pullers",
-    "gear": "Body Weight",
-    "type": "Cardio",
-    "area": "Upper"
-  },
-  {
-    "name": "happy saguaro, sad saguaro",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Upper"
   },
   {
     "name": "jumping jacks",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "high knees",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "spider walk",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "dead lifts",
+    "bilateral": false,
     "gear": "Body Weight",
-    "type": "Cardio",
+    "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "lunge knee drives",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "mario jumps",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "curtseys",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "marching",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "lunge walks",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "butt kicks",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
   },
   {
     "name": "mountain climbers",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Core"
   },
   {
     "name": "bicycles",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Core"
   },
   {
     "name": "tuck ins",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Core"
   },
   {
     "name": "cosmic abs",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Core"
   },
   {
     "name": "russian twists",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Core"
   },
   {
     "name": "starfish in and out",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Core"
   },
   {
     "name": "push-ups",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "diamond push-ups",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "tricep push-ups",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "down dog push-ups",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "dips",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "chest press with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "fly with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "rows with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "overhead press with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "shoulder raises with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "reverse fly with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "overhead pull downs (pull ups) with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "bicep curls with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "tricep press with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "wrist curls with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "reverse wrist curls with bands",
+    "bilateral": false,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "calf raises",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "bridge lifts",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "squats",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "donkey kicks",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "fire hydrants",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "fire hydrants with kick",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "clams",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "clam circles",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "clam knee and toe taps",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "laying leg lift to side",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "standing leg lift to side",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to side",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "standing leg lift to front",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "seated leg lift",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to front",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to inside",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "laying inner leg lift",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "warrior 3 leg lift to back",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "laying leg lift to back",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "standing leg lift to back",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "lunges",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "outer hip with band",
+    "bilateral": true,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "inner hip with band",
+    "bilateral": true,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "front hip with band",
+    "bilateral": true,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "back hip with band",
+    "bilateral": true,
     "gear": "Resistance Bands",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "crunches",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "crunches with feet to sky",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "crunches with knees 90 degrees",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "crucifixions",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "alphabet leg raises",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "scissors",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "flutter kicks",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "pikes",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "tuck ins",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "sit ups",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "sit ups with twist",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "crunches fingers to sky",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "crunches fingers to feet along ground",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "crunches legs up touch toes",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "oblique crunches hips to one side",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "oblique crunches elbow to knee",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "oblique crunches knees up",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "oblique crunches legs up",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "reverse crunches",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "wide leg raises",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "leg raises crisscross up and down",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "leg raises circles",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "forearm plank",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank on hands",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, step side-side",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, tap hips side-side",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, knee to elbow",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, knee to opposite elbow",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, hand taps shoulder",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, reach hand to front",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank, one arm side-side",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "side plank",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "side plank with hips up and down",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "plank with hips up and down",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "superman pulses",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "superman legs only",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "superman arms only",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "superman alternate sides",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "boat",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "low boat",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "boat side to side",
-    "gear": "Body Weight",
-    "type": "Strength",
-    "area": "Core"
-  },
-  {
-    "name": "banana side to side",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "rabbit pose",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Upper"
   },
   {
     "name": "tricep Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Upper"
   },
   {
     "name": "eagle arms",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Upper"
   },
   {
     "name": "neck side Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Upper"
   },
   {
     "name": "arm behind back shoulder Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Upper"
   },
   {
     "name": "happy saguaro Stretch",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Upper"
   },
   {
     "name": "lizard",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "half monkey",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "forward fold",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "figure four Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "high lunge Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "down dog",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "low lunge Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "ankle rolls",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "quad Stretch",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Lower"
   },
   {
     "name": "cobra",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Core"
   },
   {
     "name": "seated twist",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Core"
   },
   {
     "name": "up dog",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Stretch",
     "area": "Core"
   },
   {
     "name": "neck roll out",
+    "bilateral": false,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "Lower back roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "middle back roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "Upper back roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "top of shoulder roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "front shoulder roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "tricep roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "forearm roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Upper"
   },
   {
     "name": "hamstring roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "glute roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "quad roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "it band roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "foot roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "shin roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "calf roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "inner thigh roll out",
+    "bilateral": true,
     "gear": "Massage Ball",
     "type": "Massage",
     "area": "Lower"
   },
   {
     "name": "psoas Massage",
+    "bilateral": true,
     "gear": "Body Weight",
     "type": "Massage",
     "area": "Core"
   },
   {
     "name": "Upper Core Massage",
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Massage",
     "area": "Core"
   },
   {
     "name": "TRX pike",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX tuck-ins",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX oblique tuck-ins",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX forearm saw",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX plank, feet in strap",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX plank, hands in strap",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX side plank",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX single leg plank",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX high to low plank",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX alternating side plank",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX plank, knee to elbow",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX plank, knee to opposite elbow",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX scissors, feet in straps",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX standing russian twists",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Core"
   },
   {
     "name": "TRX rows",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX wide rows",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX row to curl",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX row to overhead press",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX single-leg rows",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX inverted rows",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX bicep curls",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX tricep overhead press",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX tricep kickbacks",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX fly",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX reverse fly",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX chest press",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX overhead press",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX shoulder raises",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX bicep curl to overhead press",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX pushups with hands on straps",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX pushups with feet in straps",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX pushups with rotation with feet in straps",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX pushups with tuck in",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Upper"
   },
   {
     "name": "TRX hamstring curl",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX squat",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX single leg squat",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX lunge",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX side lunge",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX bridge lift",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX straight leg bridge lift",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
   },
   {
     "name": "TRX dead lift",
+    "bilateral": false,
     "gear": "TRX",
     "type": "Strength",
     "area": "Lower"
