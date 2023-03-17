@@ -1,6 +1,6 @@
 import speak from "./speak";
 import { Statuses } from "./statuses";
-import workoutInit from "./workoutInit"
+import workoutInit from "./workoutInit";
 import { celebratoryPhrases } from "./celebratoryPhrases.js";
 
 function getNewExercise({ exercisePool, secondaryExercisePool }) {
@@ -22,7 +22,7 @@ export default function workoutReducer(currentState, payload) {
     return workoutInit({ ...payload, startWorkout: true });
   } else if (payload.action === "mute") {
     return { ...currentState, muted: true };
-  }  else if (payload.action === "unmute") {
+  } else if (payload.action === "unmute") {
     return { ...currentState, muted: false };
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
@@ -43,7 +43,9 @@ export default function workoutReducer(currentState, payload) {
     // Return early if workout is over
     if (workoutIsOver && !currentState.muted) {
       speak(
-        celebratoryPhrases[Math.floor(Math.random() * celebratoryPhrases.length)]
+        celebratoryPhrases[
+          Math.floor(Math.random() * celebratoryPhrases.length)
+        ]
       );
       return {
         ...currentState,
@@ -52,32 +54,54 @@ export default function workoutReducer(currentState, payload) {
       };
     }
 
-    let newCurrentExercise
-    let newExercisePool
-    let newSecondaryExercisePool
-    let newIsFirstSide
+    const isLastInterval = newInterval + 1 === totalIntervals;
+
+    let newCurrentExercise;
+    let newExercisePool;
+    let newSecondaryExercisePool;
+    let newIsFirstSide;
     if (oldInterval === newInterval) {
       // keep the same info
-      newCurrentExercise = currentState.currentExercise
-      newExercisePool = currentState.exercisePool
-      newSecondaryExercisePool = currentState.secondaryExercisePool
-      newIsFirstSide = currentState.isFirstSide
-    } else if (currentState.currentExercise.bilateral && currentState.isFirstSide) {
+      newCurrentExercise = currentState.currentExercise;
+      newExercisePool = currentState.exercisePool;
+      newSecondaryExercisePool = currentState.secondaryExercisePool;
+      newIsFirstSide = currentState.isFirstSide;
+
+      // if this is the last interval and if we are on the first side of a bilateral, switch sides
+      // (we do this instead of forcing the last exercise to be non-bilateral in case all of the exercises in the pool are bilateral)
+      if (
+        !currentState.muted &&
+        isLastInterval &&
+        currentState.currentExercise.bilateral &&
+        currentState.isFirstSide &&
+        currentState.totalSec +
+          (newInterval + 1) * currentState.intermissionSec -
+          newElapsedSec <=
+          currentState.intervalSec / 2
+      ) {
+        newIsFirstSide = false;
+        speak(`Switch sides.`);
+      }
+    } else if (
+      currentState.currentExercise.bilateral &&
+      currentState.isFirstSide
+    ) {
       // keep the same exercise but switch sides
-      newCurrentExercise = currentState.currentExercise
-      newExercisePool = currentState.exercisePool
-      newSecondaryExercisePool = currentState.secondaryExercisePool
-      newIsFirstSide = !currentState.isFirstSide
-      
-      console.log(`changing sides from ${currentState.isFirstSide} to ${newIsFirstSide}`)
+      newCurrentExercise = currentState.currentExercise;
+      newExercisePool = currentState.exercisePool;
+      newSecondaryExercisePool = currentState.secondaryExercisePool;
+      newIsFirstSide = !currentState.isFirstSide;
+
       if (!currentState.muted) {
         speak(`Switch sides.`);
       }
     } else {
-      // get new exercise //todo make this not return bilat if last interval?
-      ({currentExercise: newCurrentExercise ,
-        exercisePool:newExercisePool,
-        secondaryExercisePool: newSecondaryExercisePool} = getNewExercise({
+      // get new exercise
+      ({
+        currentExercise: newCurrentExercise,
+        exercisePool: newExercisePool,
+        secondaryExercisePool: newSecondaryExercisePool,
+      } = getNewExercise({
         exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
         secondaryExercisePool: JSON.parse(
           JSON.stringify(currentState.secondaryExercisePool)
@@ -86,7 +110,9 @@ export default function workoutReducer(currentState, payload) {
       newIsFirstSide = true;
 
       if (!currentState.muted) {
-        newCurrentExercise.bilateral ? speak(`Next up: ${newCurrentExercise.name}, first side`) : speak(`Next up: ${newCurrentExercise.name}`);
+        newCurrentExercise.bilateral
+          ? speak(`Next up: ${newCurrentExercise.name}, first side`)
+          : speak(`Next up: ${newCurrentExercise.name}`);
       }
     }
 
@@ -115,7 +141,7 @@ export default function workoutReducer(currentState, payload) {
   } else if (payload.action === "cancel") {
     return { ...currentState, status: Statuses.notStarted };
   } else {
-    console.log(`unknown ${console.log(JSON.stringify(payload))}`);
+    console.log(`unknown action: ${JSON.stringify(payload)}`);
     return { ...currentState };
   }
 }

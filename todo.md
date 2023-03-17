@@ -1,5 +1,3 @@
-- halfway prompt if bilateral
-- tickmark at halfway
 - make buttons higher on page for ios bar?
 - show gear as well?
 - add forking/forked deployment instructions
