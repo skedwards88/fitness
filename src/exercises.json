@@ -91,7 +91,21 @@
     "area": "Lower"
   },
   {
-    "name": "lunge walks",
+    "name": "lunges",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "lunge pulses",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "squat pulses",
     "bilateral": true,
     "gear": "Body Weight",
     "type": "Cardio",
