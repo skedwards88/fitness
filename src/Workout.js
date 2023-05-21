@@ -84,7 +84,7 @@ export default function Workout({
     }
   }
   let sideText = ""
-  if (workoutState.currentExercise?.bilateral) {
+  if (workoutState?.currentExercise?.bilateral) {
     sideText = workoutState.isFirstSide ? "first side" : "second side"
   }
   return (

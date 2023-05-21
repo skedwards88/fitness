@@ -54,73 +54,83 @@ export default function workoutReducer(currentState, payload) {
       };
     }
 
+    // If we are in the same interval, keep the same exercise info
     const isLastInterval = newInterval + 1 === totalIntervals;
-
-    let newCurrentExercise;
-    let newExercisePool;
-    let newSecondaryExercisePool;
-    let newIsFirstSide;
     if (oldInterval === newInterval) {
-      // keep the same info
-      newCurrentExercise = currentState.currentExercise;
-      newExercisePool = currentState.exercisePool;
-      newSecondaryExercisePool = currentState.secondaryExercisePool;
-      newIsFirstSide = currentState.isFirstSide;
-
       // if this is the last interval and if we are on the first side of a bilateral, switch sides
       // (we do this instead of forcing the last exercise to be non-bilateral in case all of the exercises in the pool are bilateral)
       if (
         !currentState.muted &&
         isLastInterval &&
-        currentState.currentExercise.bilateral &&
+        currentState?.currentExercise?.bilateral &&
         currentState.isFirstSide &&
         currentState.totalSec +
           (newInterval + 1) * currentState.intermissionSec -
           newElapsedSec <=
           currentState.intervalSec / 2
       ) {
-        newIsFirstSide = false;
         speak(`Switch sides.`);
       }
-    } else if (
-      currentState.currentExercise.bilateral &&
-      currentState.isFirstSide
-    ) {
-      // keep the same exercise but switch sides
-      newCurrentExercise = currentState.currentExercise;
-      newExercisePool = currentState.exercisePool;
-      newSecondaryExercisePool = currentState.secondaryExercisePool;
-      newIsFirstSide = !currentState.isFirstSide;
 
+      return {
+        ...currentState,
+        elapsedSec: newElapsedSec,
+        status: workoutIsOver ? Statuses.complete : currentState.status,
+      };
+    }
+
+    // Otherwise, change the interval:
+
+    // If the user is making up their own workout, tell them to switch
+    if (!currentState.currentExercise) {
+      if (!currentState.muted) {
+        speak(`Switch exercises.`);
+      }
+
+      return {
+        ...currentState,
+        elapsedSec: newElapsedSec,
+        status: workoutIsOver ? Statuses.complete : currentState.status,
+      };
+    }
+
+    // If bilateral, keep the same exercise but switch sides
+    if (currentState?.currentExercise?.bilateral && currentState.isFirstSide) {
       if (!currentState.muted) {
         speak(`Switch sides.`);
       }
-    } else {
-      // get new exercise
-      ({
-        currentExercise: newCurrentExercise,
-        exercisePool: newExercisePool,
-        secondaryExercisePool: newSecondaryExercisePool,
-      } = getNewExercise({
-        exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
-        secondaryExercisePool: JSON.parse(
-          JSON.stringify(currentState.secondaryExercisePool)
-        ),
-      }));
-      newIsFirstSide = true;
 
-      if (!currentState.muted) {
-        newCurrentExercise.bilateral
-          ? speak(`Next up: ${newCurrentExercise.name}, first side`)
-          : speak(`Next up: ${newCurrentExercise.name}`);
-      }
+      return {
+        ...currentState,
+        isFirstSide: !currentState.isFirstSide,
+        elapsedSec: newElapsedSec,
+        status: workoutIsOver ? Statuses.complete : currentState.status,
+      };
+    }
+
+    // Otherwise, change exercises
+    const {
+      currentExercise: newCurrentExercise,
+      exercisePool: newExercisePool,
+      secondaryExercisePool: newSecondaryExercisePool,
+    } = getNewExercise({
+      exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
+      secondaryExercisePool: JSON.parse(
+        JSON.stringify(currentState.secondaryExercisePool)
+      ),
+    });
+
+    if (!currentState.muted) {
+      newCurrentExercise.bilateral
+        ? speak(`Next up: ${newCurrentExercise.name}, first side`)
+        : speak(`Next up: ${newCurrentExercise.name}`);
     }
 
     return {
       ...currentState,
       currentExercise: newCurrentExercise,
       exercisePool: newExercisePool,
-      isFirstSide: newIsFirstSide,
+      isFirstSide: true,
       secondaryExercisePool: newSecondaryExercisePool,
       elapsedSec: newElapsedSec,
       status: workoutIsOver ? Statuses.complete : currentState.status,
