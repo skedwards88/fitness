@@ -26,6 +26,7 @@ export default function workoutReducer(currentState, payload) {
     return { ...currentState, muted: false };
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
+
     const oldInterval = Math.floor(
       currentState.elapsedSec /
         (currentState.intervalSec + currentState.intermissionSec)
@@ -38,6 +39,7 @@ export default function workoutReducer(currentState, payload) {
     const totalIntervals = Math.floor(
       currentState.totalSec / currentState.intervalSec
     );
+
     const workoutIsOver = newInterval >= totalIntervals;
 
     // Return early if workout is over
@@ -57,10 +59,10 @@ export default function workoutReducer(currentState, payload) {
     // If we are in the same interval, keep the same exercise info
     const isLastInterval = newInterval + 1 === totalIntervals;
     if (oldInterval === newInterval) {
+      let newFirstSide = currentState.isFirstSide;
       // if this is the last interval and if we are on the first side of a bilateral, switch sides
       // (we do this instead of forcing the last exercise to be non-bilateral in case all of the exercises in the pool are bilateral)
       if (
-        !currentState.muted &&
         isLastInterval &&
         currentState?.currentExercise?.bilateral &&
         currentState.isFirstSide &&
@@ -69,11 +71,15 @@ export default function workoutReducer(currentState, payload) {
           newElapsedSec <=
           currentState.intervalSec / 2
       ) {
-        speak(`Switch sides.`);
+        newFirstSide = ! currentState.isFirstSide;
+        if (!currentState.muted) {
+          speak(`Switch sides.`);
+        }
       }
 
       return {
         ...currentState,
+        isFirstSide: newFirstSide,
         elapsedSec: newElapsedSec,
         status: workoutIsOver ? Statuses.complete : currentState.status,
       };
