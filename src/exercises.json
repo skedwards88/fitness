@@ -106,7 +106,7 @@
   },
   {
     "name": "squat pulses",
-    "bilateral": true,
+    "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
     "area": "Lower"
