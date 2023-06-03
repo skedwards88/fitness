@@ -10,5 +10,7 @@ export const celebratoryPhrases = [
   "Boom Chaca Lacka!!!",
   "Ding Dong Baby!!!",
   "Namaste... Baby!!!",
+  "whistle, whistle!!!",
+  "that'll do pig, that'll do.",
   "Good Job. You are the best. Like really great. Super strong. Determined. Disciplined. Etcetera!!!"
 ]
