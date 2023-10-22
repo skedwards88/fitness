@@ -8,7 +8,9 @@ A web app that leads you through a workout session.
 
 Do you have feedback or ideas for improvement? [Open an issue](https://github.com/skedwards88/fitness/issues/new).
 
-Want more games? Visit [CnS Games](https://skedwards88.github.io/portfolio/).
+Want yoga? Visit [Yoga Bot](https://skedwards88.github.io/yoga/).
+
+Want more games? Visit [SECT Games](https://skedwards88.github.io/portfolio/).
 
 ## Development
 
