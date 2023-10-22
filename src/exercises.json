@@ -77,6 +77,83 @@
     "area": "Lower"
   },
   {
+    "name": "forearm to straight arm plank",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
+    "name": "inch work plank",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
+    "name": "cheerleaders",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "pendulums",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Core",
+    "area": "Lower"
+  },
+  {
+    "name": "plank jacks",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "bear plank twisted knee taps",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
+    "name": "airplane to standing",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "airplane to lunge",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "standing knee to elbow crunches",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "standing knee to opposite elbow crunches",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "side squat to knee up",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
     "name": "speed skaters",
     "bilateral": false,
     "gear": "Body Weight",
@@ -189,6 +266,13 @@
     "area": "Upper"
   },
   {
+    "name": "down dog under the fence",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Upper"
+  },
+  {
     "name": "dips",
     "bilateral": false,
     "gear": "Body Weight",
@@ -281,6 +365,20 @@
   },
   {
     "name": "bridge lifts",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "single leg bridge lifts",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Lower"
+  },
+  {
+    "name": "bridge marching",
     "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
@@ -616,6 +714,34 @@
     "area": "Core"
   },
   {
+    "name": "thread the needle plank",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
+    "name": "plank to bear plank",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
+    "name": "forearm plank to dolphin",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
+    "name": "plank to down dog",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
     "name": "plank, step side-side",
     "bilateral": false,
     "gear": "Body Weight",
@@ -687,6 +813,13 @@
   },
   {
     "name": "superman pulses",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Strength",
+    "area": "Core"
+  },
+  {
+    "name": "superman heal taps",
     "bilateral": false,
     "gear": "Body Weight",
     "type": "Strength",
