@@ -84,7 +84,14 @@
     "area": "Upper"
   },
   {
-    "name": "inch work plank",
+    "name": "inch worm plank",
+    "bilateral": false,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Core"
+  },
+  {
+    "name": "ball roll ups",
     "bilateral": false,
     "gear": "Body Weight",
     "type": "Cardio",
@@ -127,6 +134,20 @@
   },
   {
     "name": "airplane to lunge",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "airplane with upper body twist",
+    "bilateral": true,
+    "gear": "Body Weight",
+    "type": "Cardio",
+    "area": "Lower"
+  },
+  {
+    "name": "airplane with knee in and out",
     "bilateral": true,
     "gear": "Body Weight",
     "type": "Cardio",
