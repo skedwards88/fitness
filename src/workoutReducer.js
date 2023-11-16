@@ -149,7 +149,7 @@ export default function workoutReducer(currentState, payload) {
       ),
     });
 
-    return { ...currentState, ...amendedExercises };
+    return { ...currentState, ...amendedExercises, isFirstSide: true };
   } else if (payload.action === "play") {
     return { ...currentState, status: Statuses.running };
   } else if (payload.action === "pause") {
