@@ -71,7 +71,7 @@ export default function workoutReducer(currentState, payload) {
           newElapsedSec <=
           currentState.intervalSec / 2
       ) {
-        newFirstSide = ! currentState.isFirstSide;
+        newFirstSide = !currentState.isFirstSide;
         if (!currentState.muted) {
           speak(`Switch sides.`);
         }

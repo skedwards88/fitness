@@ -12,5 +12,5 @@ export const celebratoryPhrases = [
   "Namaste... Baby!!!",
   "whistle, whistle!!!",
   "that'll do pig, that'll do.",
-  "Good Job. You are the best. Like really great. Super strong. Determined. Disciplined. Etcetera!!!"
-]
+  "Good Job. You are the best. Like really great. Super strong. Determined. Disciplined. Etcetera!!!",
+];
