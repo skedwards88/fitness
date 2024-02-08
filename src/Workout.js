@@ -7,7 +7,7 @@ function ProgressBar({ progressWidth, progressDirection }) {
       <div
         className={`progress ${progressDirection}`}
         style={{
-          width: `${progressWidth}%`
+          width: `${progressWidth}%`,
         }}
       ></div>
     </div>
@@ -31,6 +31,7 @@ export default function Workout({
       );
     }
     return () => clearInterval(timerID);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [workoutState.status]);
 
   // time elapsed within the current intermission+interval
@@ -83,12 +84,11 @@ export default function Workout({
       return <></>;
     }
   }
-  let sideText = ""
+  let sideText = "";
   if (workoutState?.currentExercise?.bilateral) {
-    sideText = workoutState.isFirstSide ? "first side" : "second side"
+    sideText = workoutState.isFirstSide ? "first side" : "second side";
   }
   return (
-    
     <div id="workout">
       <Warning
         exercisePool={workoutState.exercisePool}
@@ -123,42 +123,39 @@ export default function Workout({
           <button
             id="pauseButton"
             onClick={() => dispatchWorkoutState({ action: "pause" })}
-          >
-          </button>
+          ></button>
         ) : (
           <button
             id="playButton"
             onClick={() => dispatchWorkoutState({ action: "play" })}
-          >
-          </button>
+          ></button>
         )}
         {workoutState.muted ? (
           <button
             id="unmuteButton"
             onClick={() => dispatchWorkoutState({ action: "unmute" })}
-          >
-          </button>
+          ></button>
         ) : (
           <button
-          id="muteButton"
-          onClick={() => dispatchWorkoutState({ action: "mute" })}
-        >
-        </button>
+            id="muteButton"
+            onClick={() => dispatchWorkoutState({ action: "mute" })}
+          ></button>
         )}
         <button
           id="swapButton"
           onClick={() => dispatchWorkoutState({ action: "swap" })}
-        >
-        </button>
-        <button id="settingsButton" onClick={() => {
+        ></button>
+        <button
+          id="settingsButton"
+          onClick={() => {
             dispatchWorkoutState({ action: "pause" });
             setShowSettings(true);
-          }}></button>
+          }}
+        ></button>
         <button
           id="cancelButton"
           onClick={() => dispatchWorkoutState({ action: "cancel" })}
-        >
-        </button>
+        ></button>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ import workoutReducer from "./workoutReducer";
 import workoutInit from "./workoutInit";
 
 function App() {
-
   const [showSettings, setShowSettings] = React.useState(false);
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(
@@ -39,7 +38,7 @@ function App() {
     } catch (err) {
       console.error(`${err.name}, ${err.message}`);
     }
-  });
+  }, []);
 
   const releaseWakeLock = React.useCallback(async () => {
     console.log("releasing wakeLock");
@@ -48,7 +47,7 @@ function App() {
       return;
     }
     await wakeLock.current.release();
-  });
+  }, []);
 
   React.useEffect(() => {
     if (
@@ -59,6 +58,7 @@ function App() {
     } else {
       releaseWakeLock();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [workoutState.status]);
 
   if (showSettings) {
