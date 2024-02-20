@@ -2,6 +2,7 @@ const path = require("path");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const packageJson = require("./package.json");
 
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
@@ -40,15 +41,16 @@ module.exports = (env, argv) => {
   });
 
   const serviceWorkerPlugin = new WorkboxPlugin.GenerateSW({
-    // these options encourage the ServiceWorkers to get in there fast
-    // and not allow any straggling "old" SWs to hang around
+    // This helps ensure that all pages will be controlled by a service worker immediately after that service worker activates
     clientsClaim: true,
+    // This skips the service worker waiting phase, meaning the service worker activates as soon as it's finished installing
     skipWaiting: true,
+    cacheId: `fitness-${packageJson.version}`,
   });
 
   const plugins =
     argv.mode === "development"
-      ? [htmlPlugin]
+      ? [htmlPlugin, copyPlugin]
       : [htmlPlugin, copyPlugin, serviceWorkerPlugin];
 
   return {
@@ -60,31 +62,27 @@ module.exports = (env, argv) => {
           test: /\.(js|jsx)$/,
           exclude: /(node_modules|bower_components)/,
           loader: "babel-loader",
-          options: { presets: ["@babel/env"] },
+          options: {presets: ["@babel/env"]},
         },
         {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"],
         },
         {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
           type: "asset/resource",
         },
       ],
     },
-    resolve: { extensions: ["*", ".js", ".jsx"] },
+    resolve: {extensions: ["*", ".js", ".jsx"]},
     output: {
       publicPath: "",
-      filename: "bundle.js",
+      filename: "bundle.[fullhash].js",
       path: path.resolve(__dirname, "dist"),
       clean: true, // removes unused files from output dir
     },
     devServer: {
       static: "./dist",
-      port: 4003,
-      headers: {
-        "Cache-Control": "no-store",
-      },
     },
     plugins: plugins,
   };
