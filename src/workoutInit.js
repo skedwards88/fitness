@@ -1,7 +1,7 @@
 import getExercises from "./getExercises";
 import shuffleArray from "./shuffleArray";
-import { Areas, Gears, Types } from "./categories";
-import { Statuses } from "./statuses";
+import {Areas, Gears, Types} from "./categories";
+import {Statuses} from "./statuses";
 
 export default function workoutInit({
   totalSec,
@@ -28,7 +28,7 @@ export default function workoutInit({
       type: type,
       area: area,
       gear: gear,
-    })
+    }),
   );
   const firstExercise = exercisePool.pop();
 

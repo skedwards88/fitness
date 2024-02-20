@@ -1,7 +1,7 @@
 import React from "react";
-import { motivationalPhrases } from "./motivationalPhrases";
+import {motivationalPhrases} from "./motivationalPhrases";
 
-export default function Home({ setShowSettings }) {
+export default function Home({setShowSettings}) {
   return (
     <div id="home">
       <div>

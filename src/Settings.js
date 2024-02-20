@@ -1,7 +1,7 @@
 import React from "react";
-import { Areas, Gears, Types } from "./categories";
+import {Areas, Gears, Types} from "./categories";
 
-function Checkbox({ name, checked }) {
+function Checkbox({name, checked}) {
   return (
     <div className="setting">
       <label htmlFor={name}>{name}</label>

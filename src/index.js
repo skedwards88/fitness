@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import App from "./App.js";
 
 if (process.env.NODE_ENV !== "development" && "serviceWorker" in navigator) {
@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== "development" && "serviceWorker" in navigator) {
   const scope = location.hostname === "localhost" ? "" : "/fitness/";
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register(path, { scope: scope })
+      .register(path, {scope: scope})
       .then((registration) => {
         console.log("SW registered: ", registration);
       })
