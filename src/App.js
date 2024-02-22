@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import Workout from "./Workout";
 import Home from "./Home";
 import Settings from "./Settings";
