@@ -1,9 +1,9 @@
 import speak from "./speak";
-import { Statuses } from "./statuses";
+import {Statuses} from "./statuses";
 import workoutInit from "./workoutInit";
-import { celebratoryPhrases } from "./celebratoryPhrases.js";
+import {celebratoryPhrases} from "./celebratoryPhrases.js";
 
-function getNewExercise({ exercisePool, secondaryExercisePool }) {
+function getNewExercise({exercisePool, secondaryExercisePool}) {
   if (!exercisePool.length) {
     exercisePool = secondaryExercisePool.reverse();
     secondaryExercisePool = [];
@@ -19,25 +19,25 @@ function getNewExercise({ exercisePool, secondaryExercisePool }) {
 
 export default function workoutReducer(currentState, payload) {
   if (payload.action === "newWorkout") {
-    return workoutInit({ ...payload, startWorkout: true });
+    return workoutInit({...payload, startWorkout: true});
   } else if (payload.action === "mute") {
-    return { ...currentState, muted: true };
+    return {...currentState, muted: true};
   } else if (payload.action === "unmute") {
-    return { ...currentState, muted: false };
+    return {...currentState, muted: false};
   } else if (payload.action === "increment") {
     const newElapsedSec = currentState.elapsedSec + 1;
 
     const oldInterval = Math.floor(
       currentState.elapsedSec /
-        (currentState.intervalSec + currentState.intermissionSec)
+        (currentState.intervalSec + currentState.intermissionSec),
     );
 
     const newInterval = Math.floor(
-      newElapsedSec / (currentState.intervalSec + currentState.intermissionSec)
+      newElapsedSec / (currentState.intervalSec + currentState.intermissionSec),
     );
 
     const totalIntervals = Math.floor(
-      currentState.totalSec / currentState.intervalSec
+      currentState.totalSec / currentState.intervalSec,
     );
 
     const workoutIsOver = newInterval >= totalIntervals;
@@ -47,7 +47,7 @@ export default function workoutReducer(currentState, payload) {
       speak(
         celebratoryPhrases[
           Math.floor(Math.random() * celebratoryPhrases.length)
-        ]
+        ],
       );
       return {
         ...currentState,
@@ -122,7 +122,7 @@ export default function workoutReducer(currentState, payload) {
     } = getNewExercise({
       exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
       secondaryExercisePool: JSON.parse(
-        JSON.stringify(currentState.secondaryExercisePool)
+        JSON.stringify(currentState.secondaryExercisePool),
       ),
     });
 
@@ -145,19 +145,19 @@ export default function workoutReducer(currentState, payload) {
     const amendedExercises = getNewExercise({
       exercisePool: JSON.parse(JSON.stringify(currentState.exercisePool)),
       secondaryExercisePool: JSON.parse(
-        JSON.stringify(currentState.secondaryExercisePool)
+        JSON.stringify(currentState.secondaryExercisePool),
       ),
     });
 
-    return { ...currentState, ...amendedExercises, isFirstSide: true };
+    return {...currentState, ...amendedExercises, isFirstSide: true};
   } else if (payload.action === "play") {
-    return { ...currentState, status: Statuses.running };
+    return {...currentState, status: Statuses.running};
   } else if (payload.action === "pause") {
-    return { ...currentState, status: Statuses.paused };
+    return {...currentState, status: Statuses.paused};
   } else if (payload.action === "cancel") {
-    return { ...currentState, status: Statuses.notStarted };
+    return {...currentState, status: Statuses.notStarted};
   } else {
     console.log(`unknown action: ${JSON.stringify(payload)}`);
-    return { ...currentState };
+    return {...currentState};
   }
 }

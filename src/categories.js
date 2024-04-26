@@ -18,4 +18,4 @@ function buildCategories() {
   };
 }
 
-export const { Gears, Areas, Types } = buildCategories();
+export const {Gears, Areas, Types} = buildCategories();

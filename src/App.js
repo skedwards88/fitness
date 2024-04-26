@@ -1,9 +1,8 @@
 import React from "react";
-import "./App.css";
 import Workout from "./Workout";
 import Home from "./Home";
 import Settings from "./Settings";
-import { Statuses } from "./statuses";
+import {Statuses} from "./statuses";
 import workoutReducer from "./workoutReducer";
 import workoutInit from "./workoutInit";
 
@@ -13,7 +12,7 @@ function App() {
   const [workoutState, dispatchWorkoutState] = React.useReducer(
     workoutReducer,
     {},
-    workoutInit
+    workoutInit,
   );
 
   React.useEffect(() => {

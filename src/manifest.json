@@ -2,12 +2,15 @@
   "name": "Fitness Bot",
   "short_name": "Fitness Bot",
   "description": "A fitness app",
+  "id": "?fitness_bot=20240426",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
-  "start_url": "../.",
+  "start_url": "https://skedwards88.github.io/fitness/",
+  "scope": "/fitness/",
   "background_color": "#595959",
   "theme_color": "#ffeb12",
+  "shortcuts": [],
   "icons": [
     {
       "src": "favicon.svg",
