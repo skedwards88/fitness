@@ -60,16 +60,17 @@ export default function workoutReducer(currentState, payload) {
     const isLastInterval = newInterval + 1 === totalIntervals;
     if (oldInterval === newInterval) {
       let newFirstSide = currentState.isFirstSide;
-      // if this is the last interval and if we are on the first side of a bilateral, switch sides
-      // (we do this instead of forcing the last exercise to be non-bilateral in case all of the exercises in the pool are bilateral)
+      // if this is the last interval
+      // and if we are on the first side of a bilateral
+      // and if we are halfway through the last interval,
+      // switch sides
+      // (do this instead of forcing the last exercise to be non-bilateral in case all of the exercises in the pool are bilateral)
+      const timeElapsedInThisInterval = newElapsedSec - (newInterval * (currentState.intervalSec + currentState.intermissionSec));
       if (
         isLastInterval &&
         currentState?.currentExercise?.bilateral &&
         currentState.isFirstSide &&
-        currentState.totalSec +
-          (newInterval + 1) * currentState.intermissionSec -
-          newElapsedSec <=
-          currentState.intervalSec / 2
+        timeElapsedInThisInterval >= currentState.intervalSec / 2
       ) {
         newFirstSide = !currentState.isFirstSide;
         if (!currentState.muted) {
